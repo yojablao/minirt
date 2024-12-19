@@ -42,21 +42,64 @@ int check_identifier(char *s)
     else
         return (0);
 }
+double get_nb(char *s)
+{
+    double  result;
+    double  fasila;
+    int i ;
+    int r;
+    result = 0.0;
+    i = 0;
+    r = 0;
+    fasila = 0.0;
+    while (s[i] && ft_isdigit(s[i]))
+        result = result * 10 + (s[i++] + '0');
+    if(s[i] && s[i] == '.')
+    {
+        r = i;
+        i++;
+        while (s[i] && ft_isdigit(s[i]))
+            result = result * 10 + (s[i++] + '0');
+    }
+    
+    
 
+}
+double ratio_check_amlight(char *s)
+{
+    int a = get_nb(s)
+    ft_it
+    
 
+}
+int fill_ambligth(t_amlight **al,char **s)
+{
+    t_amlight *tmp;
+
+    tmp = malloc(sizeof(t_amlight));
+    tmp->ratio = ratio_check_amlight(s[1]);
+    tmp->color = get_colors(s[]);
+    get
+
+}
 int fill_struct(t_scene *scene,char **buffer,int type)
 {
-    if (type == 1)
-        fill_ambligth(&scene->amligth,);
-    else if (type == 2)
+    if (type == 1 && fill_ambligth(&scene->amligth,buffer))
+            return (1)
+    if (type == 2)
+            return (1)
 
-    else if (type == 3)
+    if (type == 3)
+            return (1)
 
-    else if (type == 4)
+    if (type == 4)
+            return (1)
 
-    else if (type == 5)
+    if (type == 5)
+            return (1)
 
-    else if (type == 6)
+    if (type == 6)
+            return (1)
 
 
 }
@@ -86,7 +129,7 @@ t_scene *read_it(int fd)
     while (1)
     {
         buffer = get_next_line(fd);
-        if(!buffer)
+        if (!buffer)
             break;
         if(!pars_it(buffer,scene))
             break;
