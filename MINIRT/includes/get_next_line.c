@@ -72,7 +72,7 @@ char	*readfd(char **buffer, int fd)
 	r = malloc((size_t)BUFFER_SIZE +1);
 	if (!r)
 		return (NULL);
-	while (l && !ft_strchr(*buffer, '\n'))
+	while (l && !ft_strchrg(*buffer, '\n'))
 	{
 		l = read(fd, r, BUFFER_SIZE);
 		if (l < 0)

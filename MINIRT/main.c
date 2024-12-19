@@ -25,17 +25,23 @@ int check_file(char *s,int *fd)
     }
     return (1);
 }
-void open_and_pars()
-{
 
-}
 void pars_it(char *s,t_scene *scene)
 {
     char **buffer;
     buffer = ft_split(s,' ');
+    int i = 0;
+    while (buffer[i])
+    {
+        printf("%s ",buffer[i]);
+        i++;
+    }
+    printf("\n");
     
+
+
 }
-t_scene *read(int fd)
+t_scene *read_it(int fd)
 {
     t_scene *scene;
     char *buffer;
@@ -46,8 +52,12 @@ t_scene *read(int fd)
     while (1)
     {
         buffer = get_next_line(fd);
+        if(!buffer)
+            break;
         pars_it(buffer,scene);
     }
+    printf("done_hire\n");
+    return (scene);
     
 
 }
@@ -55,13 +65,14 @@ t_scene *read(int fd)
 int main(int c , char **v)
 {
     int fd;
+    t_scene *scene;
 
     if(c == 2)
     {
         if(check_file(v[1],&fd))
             return(printf("error\n"), 1);
         printf("%d\n",fd);
-        read(fd);
+        scene = read_it(fd);
         
 
     }

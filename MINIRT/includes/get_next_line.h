@@ -21,7 +21,7 @@
 # include <stdlib.h>
 # include <limits.h>
 
-int		ft_strchr(const char *str, int find);
+int		ft_strchrg(const char *str, int find);
 char	*get_next_line(int fd);
 char	*strjoin(char *s1, char	*s2);
 void	ft_strcpy(char *dest, const char *src);

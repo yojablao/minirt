@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-int	ft_strchr(const char *str, int find)
+int	ft_strchrg(const char *str, int find)
 {
 	int	i;
 
