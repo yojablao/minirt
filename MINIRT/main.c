@@ -27,17 +27,19 @@ int check_file(char *s,int *fd)
 }
 int check_identifier(char *s)
 {
-    if(ft_strncmp(s,"A",1) == 0)
+    if(!s)
+        return(-1);
+    else if(ft_strncmp(s,"A",ft_strlen(s)) == 0)
         return (1);
-    else if(ft_strncmp(s,"C",1) == 0)
+    else if(ft_strncmp(s,"C",ft_strlen(s)) == 0)
         return (2);
-    else if(ft_strncmp(s,"L",1) == 0)
+    else if(ft_strncmp(s,"L",ft_strlen(s)) == 0)
         return (3);
-    else if(ft_strncmp(s,"sp",1) == 0)
+    else if(ft_strncmp(s,"sp",ft_strlen(s)) == 0)
         return (4);
-    else if(ft_strncmp(s,"pl",1) == 0)
+    else if(ft_strncmp(s,"pl",ft_strlen(s)) == 0)
         return (5);
-    else if(ft_strncmp(s,"cy",1) == 0)
+    else if(ft_strncmp(s,"cy",ft_strlen(s)) == 0)
         return (6);
     else
         return (0);
@@ -106,7 +108,7 @@ int check_if_nb(char *s)
     }
     return(1);    
 }
-int ratio_check_amlight(char *s,double *i)
+int ratio_check(char *s,double *i)
 {
     if(!check_if_nb(s))
         return(printf("waa3333\n"),0);
@@ -147,7 +149,7 @@ int fill_ambligth(t_amlight **al,char **s)
     t_amlight *tmp;
 
     tmp = malloc(sizeof(t_amlight));
-    if(!ratio_check_amlight(s[1],&tmp->ratio) || !get_colors(&tmp->color,s[2])) 
+    if(!ratio_check(s[1],&tmp->ratio) || !get_colors(&tmp->color,s[2])) 
         return(0);
     
     (*al) = tmp;
@@ -203,19 +205,49 @@ int camera_handle(t_camera **cam,char **s)
     *cam = c;
     return (1);
 }
+
+
+
+
+
+
+int light_handle(t_light **lt,char **s)
+{
+    t_light *tmp;
+    tmp = malloc(sizeof(t_light));
+    if(!tmp)
+        return(0);
+    if(!get_point(&tmp->point,s[1]) || !ratio_check(s[2],&tmp->ratio) || !get_colors(&tmp->color,s[3]))
+        return(0);
+    *lt = tmp;
+    return(1);
+    
+}
+int sphere_handle(t_sphere **lt,char **s)
+{
+    t_sphere *tmp;
+
+    tmp = malloc(sizeof(t_sphere));
+    if(!tmp)
+        return(0);
+    if(!get_point(&tmp->center,s[1]) || diameter_handle())
+    
+}
 int fill_struct(t_scene *scene,char **buffer,int type)
 {
     if (type == 1 && fill_ambligth(&scene->amligth,buffer))
             return (printf("[%f][%f][%f][%f]\n",scene->amligth->ratio,scene->amligth->color.r,scene->amligth->color.b,scene->amligth->color.g),1);
     else if (type == 2 && camera_handle(&scene->camera,buffer))
         return (printf("[%f][%f][%f][%f]\n",scene->camera->point.x,scene->camera->point.y,scene->camera->point.z,scene->camera->viewdegrees),1);
-    else if (type == 3)
-        return (1);
-    else if (type == 4)
+    else if (type == 3 && light_handle(&scene->ligth,buffer))
+        return (printf("[%f][%f][%f][%f]\n",scene->ligth->ratio,scene->ligth->color.r,scene->ligth->color.b,scene->ligth->color.g),1);
+    else if (type == 4 && sphere_handle(&scene->sphere,buffer))
         return (1);
     else if (type == 5)
         return (1);
     else if (type == 6)
+        return (1);
+    else if (type == -1)
         return (1);
     else
         return(printf("nagh type[%d]\n",type),0);
