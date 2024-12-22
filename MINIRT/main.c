@@ -178,7 +178,7 @@ int get_normalizer(t_point *vector,char *s)
 {
     if(!get_point(vector,s))
         return(0);
-    if(!ft_rang(-1,vector->x,1),ft_rang(-1,vector->y,1),ft_rang(-1,vector->z,1))
+    if(!ft_rang(-1,vector->x,1) || !ft_rang(-1,vector->y,1) || !ft_rang(-1,vector->z,1))
         return(0);
     return(1);
 }
@@ -197,9 +197,10 @@ int camera_handle(t_camera **cam,char **s)
 
     c = malloc(sizeof(t_camera));
     if(len2d(s) != 4)
-        return(0);
-    if(!get_point(&c->point,s[1]) || !get_normalizer(&c->vector,s[2]) || !field_of_view(c->viewdegrees,s[3]))
-        return(0);
+        return(printf("done_hire1\n"),0);
+    if(!get_point(&c->point,s[1]) || !get_normalizer(&c->vector,s[2]) || !field_of_view(&c->viewdegrees,s[3]))
+        return(printf("done_hire2\n"),0);
+    *cam = c;
     return (1);
 }
 int fill_struct(t_scene *scene,char **buffer,int type)
@@ -207,7 +208,7 @@ int fill_struct(t_scene *scene,char **buffer,int type)
     if (type == 1 && fill_ambligth(&scene->amligth,buffer))
             return (printf("[%f][%f][%f][%f]\n",scene->amligth->ratio,scene->amligth->color.r,scene->amligth->color.b,scene->amligth->color.g),1);
     else if (type == 2 && camera_handle(&scene->camera,buffer))
-        return (1);
+        return (printf("[%f][%f][%f][%f]\n",scene->camera->point.x,scene->camera->point.y,scene->camera->point.z,scene->camera->viewdegrees),1);
     else if (type == 3)
         return (1);
     else if (type == 4)
@@ -250,7 +251,7 @@ t_scene *read_it(int fd)
         if(!pars_it(buffer,scene))
             break;
     }
-    // printf("done_hire\n");
+    
     return (scene);
     
 

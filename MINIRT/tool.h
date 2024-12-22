@@ -40,7 +40,7 @@ typedef struct s_camera
 {
     t_point point;
     t_point vector;
-    int viewdegrees;
+    double viewdegrees;
 }t_camera;
 
 typedef struct s_light
