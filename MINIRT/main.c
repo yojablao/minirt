@@ -260,6 +260,22 @@ void print_point(t_point l,t_color c)
     printf(" point(%f,%f,%f) color(%f,%f,%f)\n",l.x,l.y,l.z,c.r,c.g,c.b);
 }
 
+int cylinder_handle(t_cylinder **lt,char **s)
+{
+    t_cylinder *tmp;
+
+    tmp = malloc(sizeof(t_cylinder));
+    if(!tmp)
+        return (0);
+    if(!get_point(&tmp->center,s[1]) || !get_normalizer(&tmp->vector,s[2])
+        || !diameter_handle(&tmp->diameter,s[3] || !diameter_handle(&tmp->height,s[4]))
+        || !get_colors(&tmp->color,s[5]))
+            return(0);
+    *lt = tmp;
+    return(1);
+
+}
+
 int fill_struct(t_scene *scene,char **buffer,int type)
 {
     if (type == 1 && fill_ambligth(&scene->amligth,buffer))
@@ -272,7 +288,7 @@ int fill_struct(t_scene *scene,char **buffer,int type)
             return(print_point(scene->sphere->center,scene->sphere->color),1);
     else if (type == 5 && Plane_handle(&scene->plane,buffer))
         return (print_point(scene->plane->point,scene->plane->color),1);
-    else if (type == 6)
+    else if (type == 6 && cylinder_handle(&scene->cylinder,buffer))
         return (1);
     else if (type == -1)
         return (1);
