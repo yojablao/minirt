@@ -83,5 +83,5 @@ typedef struct s_scene
 }t_scene;
 
 
-
+int ft_rang(double min,double num,double max);
 #endif

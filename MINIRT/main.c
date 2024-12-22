@@ -74,6 +74,15 @@ double get_nb(char *s)
     }
     return(result * sign);
 }
+int len2d(char **a)
+{
+    int i = 0;
+    if(!a||!*a)
+        return(0);
+    while(a[i])
+        i++;
+    return(i);
+}
 int check_if_nb(char *s)
 {
     int a ;
@@ -125,8 +134,12 @@ int get_colors(t_color *color,char *s)
         i++;
     }
     color->r =  ft_atoi(buffer[0]);
-    color->g =  ft_atoi(buffer[1]);
     color->b =  ft_atoi(buffer[2]);
+    color->g =  ft_atoi(buffer[1]);
+    if(color->r > 255 || color->b > 255 || color->g > 255)
+        return(0);
+    if(color->r < 0 || color->b < 0 || color->g < 0)
+        return(0);
     return(1);
 }
 int fill_ambligth(t_amlight **al,char **s)
@@ -136,13 +149,64 @@ int fill_ambligth(t_amlight **al,char **s)
     tmp = malloc(sizeof(t_amlight));
     if(!ratio_check_amlight(s[1],&tmp->ratio) || !get_colors(&tmp->color,s[2])) 
         return(0);
+    
+    (*al) = tmp;
     return(1);
+}
+int get_point(t_point *point,char *s)
+{
+    char **buffer;
+
+    buffer = ft_split(s,',');
+    int i = 0;
+    int j;
+    if(!buffer[0] || !buffer[1] || !buffer[2])
+        return(0);
+    while(buffer[i])
+    {
+      if(!check_if_nb(buffer[i]))
+        return(0);
+        i++;
+    }
+    point->x = get_nb(buffer[0]);
+    point->y = get_nb(buffer[1]);
+    point->z = get_nb(buffer[2]);
+    return(1);
+}
+
+int get_normalizer(t_point *vector,char *s)
+{
+    if(!get_point(vector,s))
+        return(0);
+    if(!ft_rang(-1,vector->x,1),ft_rang(-1,vector->y,1),ft_rang(-1,vector->z,1))
+        return(0);
+    return(1);
+}
+int field_of_view(double *view,char *s)
+{
+    if(!check_if_nb(s))
+        return(0);
+    *view = get_nb(s);
+    if(!ft_rang(0,*view,180))
+        return(0);
+    return(1);
+}
+int camera_handle(t_camera **cam,char **s)
+{
+    t_camera *c;
+
+    c = malloc(sizeof(t_camera));
+    if(len2d(s) != 4)
+        return(0);
+    if(!get_point(&c->point,s[1]) || !get_normalizer(&c->vector,s[2]) || !field_of_view(c->viewdegrees,s[3]))
+        return(0);
+    return (1);
 }
 int fill_struct(t_scene *scene,char **buffer,int type)
 {
     if (type == 1 && fill_ambligth(&scene->amligth,buffer))
-            return (1);
-    else if (type == 2)
+            return (printf("[%f][%f][%f][%f]\n",scene->amligth->ratio,scene->amligth->color.r,scene->amligth->color.b,scene->amligth->color.g),1);
+    else if (type == 2 && camera_handle(&scene->camera,buffer))
         return (1);
     else if (type == 3)
         return (1);
@@ -155,29 +219,6 @@ int fill_struct(t_scene *scene,char **buffer,int type)
     else
         return(printf("nagh type[%d]\n",type),0);
 }
-// int check_amligth_nbs(char **v)
-// {
-//     int i = 0;
-    
-//     if(v[1][i])
-// // }
-// int check_nb(char **buffer,int type)
-// {
-//     // if (type == 1 && check_amligth_nbs(buffer))
-//     //         return (1);
-//     else if (type == 2)
-//         return (1);
-//     else if (type == 3)
-//         return (1);
-//     else if (type == 4)
-//         return (1);
-//     else if (type == 5)
-//         return (1);
-//     else if (type == 6)
-//         return (1);
-//     else
-//         return(0);
-// }
 int pars_it(char *s,t_scene *scene)
 {
     char **buffer;
@@ -189,8 +230,6 @@ int pars_it(char *s,t_scene *scene)
     type = check_identifier(buffer[0]);
     if(!type)
         return(0);
-    // if(!check_nb(scene,buffer,type))
-    //     return(0);
     if(!fill_struct(scene,buffer,type))
         return(0);
     return(1);
