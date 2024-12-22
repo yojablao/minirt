@@ -223,6 +223,14 @@ int light_handle(t_light **lt,char **s)
     return(1);
     
 }
+int diameter_handle(double *dmeter,char *s)
+{
+    if(!check_if_nb(s))
+        return(0);
+    *dmeter = get_nb(s);
+    return(1);
+
+}
 int sphere_handle(t_sphere **lt,char **s)
 {
     t_sphere *tmp;
@@ -230,9 +238,28 @@ int sphere_handle(t_sphere **lt,char **s)
     tmp = malloc(sizeof(t_sphere));
     if(!tmp)
         return(0);
-    if(!get_point(&tmp->center,s[1]) || diameter_handle())
-    
+    if(!get_point(&tmp->center,s[1]) || !diameter_handle(&tmp->diameter,s[2])|| !get_colors(&tmp->color,s[3]))
+        return(0);
+    *lt = tmp;
+    return(1);
 }
+int Plane_handle(t_plane **lt,char **s)
+{
+    t_plane *tmp;
+
+    tmp = malloc(sizeof(t_plane));
+    if(!tmp)
+        return(0);
+    if(!get_point(&tmp->point,s[1]) || !get_normalizer(&tmp->vector,s[2]) || !get_colors(&tmp->color,s[3]))
+        return(0);
+    *lt = tmp;
+    return(1);
+}
+void print_point(t_point l,t_color c)
+{
+    printf(" point(%f,%f,%f) color(%f,%f,%f)\n",l.x,l.y,l.z,c.r,c.g,c.b);
+}
+
 int fill_struct(t_scene *scene,char **buffer,int type)
 {
     if (type == 1 && fill_ambligth(&scene->amligth,buffer))
@@ -242,9 +269,9 @@ int fill_struct(t_scene *scene,char **buffer,int type)
     else if (type == 3 && light_handle(&scene->ligth,buffer))
         return (printf("[%f][%f][%f][%f]\n",scene->ligth->ratio,scene->ligth->color.r,scene->ligth->color.b,scene->ligth->color.g),1);
     else if (type == 4 && sphere_handle(&scene->sphere,buffer))
-        return (1);
-    else if (type == 5)
-        return (1);
+            return(print_point(scene->sphere->center,scene->sphere->color),1);
+    else if (type == 5 && Plane_handle(&scene->plane,buffer))
+        return (print_point(scene->plane->point,scene->plane->color),1);
     else if (type == 6)
         return (1);
     else if (type == -1)
