@@ -32,7 +32,6 @@ typedef struct s_tuple
 typedef struct s_amlight
 {
     double ratio;
-
     t_color color;
     
 }t_amlight;
