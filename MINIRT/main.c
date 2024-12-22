@@ -268,7 +268,7 @@ int cylinder_handle(t_cylinder **lt,char **s)
     if(!tmp)
         return (0);
     if(!get_point(&tmp->center,s[1]) || !get_normalizer(&tmp->vector,s[2])
-        || !diameter_handle(&tmp->diameter,s[3] || !diameter_handle(&tmp->height,s[4]))
+        || !diameter_handle(&tmp->diameter,s[3]) || !diameter_handle(&tmp->height,s[4])
         || !get_colors(&tmp->color,s[5]))
             return(0);
     *lt = tmp;
@@ -289,7 +289,7 @@ int fill_struct(t_scene *scene,char **buffer,int type)
     else if (type == 5 && Plane_handle(&scene->plane,buffer))
         return (print_point(scene->plane->point,scene->plane->color),1);
     else if (type == 6 && cylinder_handle(&scene->cylinder,buffer))
-        return (1);
+        return (print_point(scene->cylinder->center,scene->cylinder->color),1);
     else if (type == -1)
         return (1);
     else
