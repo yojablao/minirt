@@ -20,6 +20,7 @@
         "limits.h": "c",
         "__locale": "c",
         "sstream": "c",
-        "libft.h": "c"
+        "libft.h": "c",
+        "libc.h": "c"
     }
 }
