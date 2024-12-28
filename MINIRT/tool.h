@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   tool.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yojablao <yojablao@student.42.ma>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/25 20:42:12 by yojablao          #+#    #+#             */
+/*   Updated: 2024/12/25 20:42:13 by yojablao         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef TOOL_H
 #define TOOL_H
 
@@ -110,3 +122,7 @@ int diameter_handle(double *dmeter,char *s);
 void print_point(t_point l,t_color c);
 int check_if_nb(char *s);
 #endif
+
+
+
+

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yojablao <yojablao@student.42.ma>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/25 20:42:43 by yojablao          #+#    #+#             */
+/*   Updated: 2024/12/25 20:51:11 by yojablao         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../tool.h"
 
 
@@ -31,7 +43,7 @@ int check_identifier(char *s)
         return (1);
     else if(ft_strncmp(s,"C",ft_strlen(s)) == 0)
         return (2);
-    else if(ft_strncmp(s,"l",ft_strlen(s)) == 0)
+    else if(ft_strncmp(s,"L",ft_strlen(s)) == 0)
         return (3);
     else if(ft_strncmp(s,"sp",ft_strlen(s)) == 0)
         return (4);
