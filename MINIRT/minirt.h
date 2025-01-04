@@ -1,24 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tool.h                                             :+:      :+:    :+:   */
+/*   minirt.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yojablao <yojablao@student.42.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/25 20:42:12 by yojablao          #+#    #+#             */
-/*   Updated: 2025/01/04 19:11:09 by yojablao         ###   ########.fr       */
+/*   Created: 2024/11/28 15:23:22 by mthamir           #+#    #+#             */
+/*   Updated: 2025/01/04 18:40:53 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TOOL_H
-#define TOOL_H
+#ifndef MINIRT_H
+#define MINIRT_H
 
 #include <libc.h>
 #include <math.h>
-#include "parsing/get_next_line.h"
+#include <stdarg.h>
+#include <MLX42.h>
 
-#include <mlx.h>
-#define EPSILON 0.00001
+
+#define	EPSILON 0.00001
+#define	π 3.1415926535
+#define SPH 1
+#define LAST_P 
+
+
+
+typedef struct s_color	{
+	double r;
+	double g;
+	double b;
+}	t_color;
+
+typedef struct s_point
+{
+    double x;
+    double y;
+    double z;
+}t_point;
 
 typedef struct s_tuple	{
 	double x;
@@ -26,14 +45,6 @@ typedef struct s_tuple	{
 	double z;
 	double w;
 } 	t_tuple;
-
-typedef struct s_color
-{
-    double r;
-    double g;
-    double b;
-
-}t_color;
 
 typedef struct s_matrix{
 	double matrix[4][4];
@@ -54,50 +65,14 @@ typedef struct s_ray
 	t_tuple *ud;
 }	t_ray;
 
-
-typedef struct s_amlight
+typedef struct s_spher
 {
-    double r;
-    t_color color;
-    
-}t_amlight;
+	double	r;
+	int		id;
+	t_matrix *transform;
+	t_tuple	*c;
 
-typedef struct s_camera
-{
-    t_ray *cam_ray;
-    double aspect_ratio;
-	double win_hight;
-	double win_width;
-    double fov;
-}t_camera;
-
-typedef struct s_light
-{
-    t_tuple point;
-    double r;
-    t_color color;
-    struct s_light *next;
-    
-}t_light;
-
-typedef struct s_sphere
-{
-    t_tuple *center;
-    double r;
-    int id;
-    double diameter;
-    t_matrix *transform;
-    t_color color;
-    struct s_sphere *next;
-}t_sphere;
-
-typedef struct s_plane
-{
-    t_tuple point;
-    t_tuple vector;
-    t_color color;
-    struct s_plane *next;
-}t_plane;
+}	t_spher;
 
 typedef struct s_intersect
 {
@@ -106,34 +81,16 @@ typedef struct s_intersect
 	double t;
 }  t_intersect;
 
-typedef struct s_cylinder
+typedef struct s_camera
 {
-    t_tuple center;
-    t_tuple vector;
-    double diameter;
-    double height;
-    t_color color;
-    struct s_cylinder *next;
-}t_cylinder;
+	t_ray *cam_ray;
+	double fov;
+	double aspect_ratio;
+	double win_hight;
+	double win_width;
+}			t_camera;
 
-typedef struct s_scene
-{
-    t_amlight   *amligth;
-    t_camera    *camera;
-    t_light     *ligth;
-    t_sphere    *sphere;
-    t_plane     *plane;
-    t_cylinder *cylinder;
-}t_scene;
 
-typedef struct	s_data {
-	void	*img;
-	char	*addr;
-	int		bits_per_pixel;
-	int		line_length;
-	int		endian;
-}				t_data;
-////////math f{}/////
 /* creat a point or a vector */
 t_tuple	*cpv(double x, double y, double z, double p_v);
 /* checks if its a point or a vector if true(1) its point else its vector */
@@ -220,40 +177,12 @@ t_ray *ray(t_tuple *origine, t_tuple *direction);
 /* shows how far the ray travels in (x distance) seconds  (Computing a point from a distance)*/
 t_tuple *position(t_ray *ray, double distance);
 /* creat a sphere with given enter and raduis */
-t_sphere *spher(t_tuple *center, double raduis, int id);
+t_spher *spher(t_tuple *center, double raduis, int id);
 /* check rays sphere intersection and fill the t_intersect struct with object type and object and intersection points */
-t_intersect	*intersect(t_ray *ray, t_sphere *spher);
+t_intersect	*intersect(t_ray *ray, t_spher *spher);
 t_ray *transform(t_ray *t, t_matrix *mat);
 
-//////end////
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
-int check_file(char *s,int *fd);
-int check_identifier(char *s);
-double get_nb(char *s);
-int len2d(char **a);
-int fill_ambligth(t_amlight **al,char **s);
-int sphere_handle(t_sphere **lt,char **s);
-int cylinder_handle(t_cylinder **lt,char **s);
-int Plane_handle(t_plane **lt,char **s);
-t_scene *read_it(int fd);
-int fill_struct(t_scene *scene,char **buffer,int type);
-int ft_rang(double min,double num,double max);
-int light_handle(t_light **lt,char **s);
-int camera_handle(t_camera **cam,char **s);
-int ratio_check(char *s,double *i);
-int get_colors(t_color *color,char *s);
-int get_point(t_tuple *point,char *s);
-int get_normalizer(t_tuple *vector,char *s);
-int field_of_view(double *view,char *s);
-int diameter_handle(double *dmeter,char *s);
-void print_point(t_tuple l,t_color c);
-int check_if_nb(char *s);
-int	ft_isdigit(int c);
-int	ft_atoi(const char *str);
-char	**ft_split(char const *s, char c ,char c1);
-int	ft_strncmp(const char *str1, const char *str2, size_t n);
+
+
+
 #endif
-
-
-
-

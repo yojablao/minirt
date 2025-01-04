@@ -6,7 +6,7 @@
 /*   By: yojablao <yojablao@student.42.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 20:42:51 by yojablao          #+#    #+#             */
-/*   Updated: 2024/12/25 20:42:52 by yojablao         ###   ########.fr       */
+/*   Updated: 2025/01/04 18:41:18 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,12 @@ int get_colors(t_color *color,char *s)
     return(1);
 }
 
-int get_point(t_point *point,char *s)
+int get_point(t_tuple *point,char *s)
 {
     char **buffer;
 
     buffer = ft_split(s,',',',');
     int i = 0;
-    int j;
     if(!buffer[0] || !buffer[1] || !buffer[2])
         return(0);
     while(buffer[i])
@@ -70,7 +69,7 @@ int get_point(t_point *point,char *s)
     return(1);
 }
 
-int get_normalizer(t_point *vector,char *s)
+int get_normalizer(t_tuple *vector,char *s)
 {
     if(!s ||!get_point(vector,s))
         return(0);

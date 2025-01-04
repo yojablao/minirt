@@ -15,12 +15,16 @@
         "ratio": "c",
         "tuple": "c",
         "utility": "c",
-        "tool.h": "c",
+        "../tool.h": "c",
         "get_next_line.h": "c",
         "limits.h": "c",
         "__locale": "c",
         "sstream": "c",
-        "libft.h": "c",
-        "libc.h": "c"
+        "../tool": "c",
+        "libc.h": "c",
+        "mlx.h": "c",
+        "tool.h": "c",
+        "iosfwd": "c",
+        "vector": "c"
     }
 }

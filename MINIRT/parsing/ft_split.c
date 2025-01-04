@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yojablao <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: yojablao <yojablao@student.42.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:51:21 by yojablao          #+#    #+#             */
-/*   Updated: 2023/12/07 09:44:02 by yojablao         ###   ########.fr       */
+/*   Updated: 2025/01/04 19:12:58 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../tool.h"
 
-static char	*sub(const char *s, char *str, size_t start, size_t size)
+static char	*subs(const char *s, char *str, size_t start, size_t size)
 {
 	size_t	i;
 
@@ -75,7 +75,7 @@ static ssize_t	norm(const char *s, char c,char c1, char **str, size_t i)
 				free_it(str, l);
 				return (-1);
 			}
-			str[l] = sub(s, str[l], start, i);
+			str[l] = subs(s, str[l], start, i);
 			l++;
 		}
 		else

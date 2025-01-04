@@ -6,11 +6,14 @@
 /*   By: yojablao <yojablao@student.42.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 20:42:39 by yojablao          #+#    #+#             */
-/*   Updated: 2024/12/25 20:42:40 by yojablao         ###   ########.fr       */
+/*   Updated: 2025/01/04 19:13:37 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../tool.h"
+
+#define WIN_WIDTH 800
+#define WIN_HEIGHT 600
 
 
 int cylinder_handle(t_cylinder **lt,char **s)
@@ -66,10 +69,11 @@ int sphere_handle(t_sphere **lt,char **s)
 
     last = *lt;
     tmp = malloc(sizeof(t_sphere));
+    tmp->center = malloc(sizeof(t_tuple));
     tmp->next = NULL;
     if(!tmp)
         return(0);
-    if(!get_point(&tmp->center,s[1]) || !diameter_handle(&tmp->diameter,s[2])|| !get_colors(&tmp->color,s[3]))
+    if(!get_point(tmp->center,s[1]) || !diameter_handle(&tmp->diameter,s[2])|| !get_colors(&tmp->color,s[3]))
         return(0);
     if(!last)
         *lt = tmp;
@@ -93,7 +97,7 @@ int light_handle(t_light **lt,char **s)
     printf("done//\n");
     if(!tmp)
         return(0);
-    if(!get_point(&tmp->point,s[1]) || !ratio_check(s[2],&tmp->ratio) || !get_colors(&tmp->color,s[3]))
+    if(!get_point(&tmp->point,s[1]) || !ratio_check(s[2],&tmp->r) || !get_colors(&tmp->color,s[3]))
         return(0);
     if(!last)
         *lt = tmp;
@@ -113,9 +117,13 @@ int camera_handle(t_camera **cam,char **s)
     if(*cam)
         return(0);
     c = malloc(sizeof(t_camera));
+    c->cam_ray = malloc(sizeof(t_ray));
+    c->cam_ray->d = malloc(sizeof(t_tuple));
+    c->cam_ray->o = malloc(sizeof(t_tuple));
+    c->cam_ray->ud = malloc(sizeof(t_tuple));
     if(len2d(s) != 4)
         return(printf("done_hire1\n"),0);
-    if(!get_point(&c->point,s[1]) || !get_normalizer(&c->vector,s[2]) || !field_of_view(&c->viewdegrees,s[3]))
+    if(!get_point(c->cam_ray->o,s[1]) || !get_normalizer(c->cam_ray->d,s[2]) || !field_of_view(&c->fov,s[3]))
         return(printf("done_hire2\n"),0);
     *cam = c;
     return (1);

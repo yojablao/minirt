@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yojablao <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 23:13:47 by yojablao          #+#    #+#             */
-/*   Updated: 2023/11/06 23:15:44 by yojablao         ###   ########.fr       */
+/*   Created: 2023/11/11 21:56:08 by yojablao          #+#    #+#             */
+/*   Updated: 2023/11/11 21:56:08 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../tool.h"
 
-void	*ft_memcpy(void *to, const void *fr, size_t n)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	if (!fr && !to)
-		return (NULL);
-	if (to == fr)
-		return (to);
-	while (i < n)
+	while (i < n && (str2[i] || str1[i]))
 	{
-		((char *)to)[i] = ((char *)fr)[i];
+		if (str1[i] != str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 		i++;
 	}
-	return (to);
+	return (0);
 }

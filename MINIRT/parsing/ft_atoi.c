@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../tool.h"
 
 static int	signe(const char *str, int *c)
 {
