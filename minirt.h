@@ -13,10 +13,16 @@
 #ifndef MINIRT_H
 #define MINIRT_H
 
-#include <libc.h>
 #include <math.h>
 #include <stdarg.h>
-#include <MLX42.h>
+#include <mlx.h>
+
+#include <key_linux.h>
+
+// # if defined(__APPLE__)
+// #  include <key_macos.h>
+// # else
+// # endif
 
 
 #define	EPSILON 0.00001

@@ -25,6 +25,7 @@
         "mlx.h": "c",
         "tool.h": "c",
         "iosfwd": "c",
-        "vector": "c"
+        "vector": "c",
+        "cstdlib": "c"
     }
 }

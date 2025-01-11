@@ -23,9 +23,9 @@ int cylinder_handle(t_cylinder **lt,char **s)
 
     last = *lt;
     tmp = malloc(sizeof(t_cylinder));
-    tmp->next = NULL;
     if(!tmp)
         return (0);
+    tmp->next = NULL;
     if(!get_point(&tmp->center,s[1]) || !get_normalizer(&tmp->vector,s[2])
         || !diameter_handle(&tmp->diameter,s[3]) || !diameter_handle(&tmp->height,s[4])
         || !get_colors(&tmp->color,s[5]))
@@ -38,6 +38,7 @@ int cylinder_handle(t_cylinder **lt,char **s)
             last = last->next;
         last = tmp;
     }
+    printf("totobini/n");
     return(1);
 }
 int Plane_handle(t_plane **lt,char **s)
@@ -110,21 +111,23 @@ int light_handle(t_light **lt,char **s)
     return(1);
     
 }
-int camera_handle(t_camera **cam,char **s)
+int camera_handle(t_camera **cm,char **s)
 {
-    t_camera *c;
-
-    if(*cam)
-        return(0);
-    c = malloc(sizeof(t_camera));
-    c->cam_ray = malloc(sizeof(t_ray));
+    // if(c)
+    //     return(0);
+    // c = malloc(sizeof(t_camera));
+    // c->cam_ray = malloc(sizeof(t_ray));
+    t_camera *c = *cm;
     c->cam_ray->d = malloc(sizeof(t_tuple));
     c->cam_ray->o = malloc(sizeof(t_tuple));
     c->cam_ray->ud = malloc(sizeof(t_tuple));
+    printf("done_hire1\n");
     if(len2d(s) != 4)
         return(printf("done_hire1\n"),0);
+    printf("done_hire1\n");
     if(!get_point(c->cam_ray->o,s[1]) || !get_normalizer(c->cam_ray->d,s[2]) || !field_of_view(&c->fov,s[3]))
         return(printf("done_hire2\n"),0);
-    *cam = c;
+
+    printf("done_hire1\n");
     return (1);
 }

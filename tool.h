@@ -13,12 +13,26 @@
 #ifndef TOOL_H
 #define TOOL_H
 
-#include <libc.h>
+
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdarg.h>
 #include <math.h>
 #include "parsing/get_next_line.h"
 
-#include <mlx.h>
-#define EPSILON 0.00001
+#include "minilibx_linux/mlx.h"
+
+#define HIGTH 500
+#define WITH 500
+
+#define	EPSILON 0.00001
+#define	π 3.1415926535
+#define SPH 1
+#define LAST_P 
+
+
+
+// #define EPSILON 0.00001
 
 typedef struct s_tuple	{
 	double x;
@@ -69,13 +83,35 @@ typedef struct s_camera
 	double win_hight;
 	double win_width;
     double fov;
+    t_tuple  *u;
+    t_tuple  *r;
+    t_tuple	*fw;
 }t_camera;
+// typedef struct s_camera
+// {
+// 	t_vector	origin;
+// 	t_vector	direction;
+// 	int			fov;
+// 	t_vector	up_v;
+// 	t_vector	right_u;
 
+// }	t_camera;
+typedef struct s_draw
+{
+	int			mlx_x;
+	int			mlx_y;
+	int			color;
+	float		x_ray;
+	float		y_ray;
+	float		z_ray;
+	t_tuple	*ray;
+}	t_draw;
 typedef struct s_light
 {
     t_tuple point;
     double r;
     t_color color;
+    int bright;
     struct s_light *next;
     
 }t_light;
@@ -116,15 +152,14 @@ typedef struct s_cylinder
     struct s_cylinder *next;
 }t_cylinder;
 
-typedef struct s_scene
+typedef struct mlx
 {
-    t_amlight   *amligth;
-    t_camera    *camera;
-    t_light     *ligth;
-    t_sphere    *sphere;
-    t_plane     *plane;
-    t_cylinder *cylinder;
-}t_scene;
+	void*		mlx;
+	void*		window;
+	int		width;
+	int		height;
+	double		delta_time;
+}	t_mlx;
 
 typedef struct	s_data {
 	void	*img;
@@ -133,8 +168,28 @@ typedef struct	s_data {
 	int		line_length;
 	int		endian;
 }				t_data;
+typedef struct s_objects
+{
+}t_objects;
+typedef struct s_scene
+{
+    // t_objects  *obj;
+    t_amlight   amligth;
+    t_camera    *camera;
+    t_light     *ligth;
+    t_sphere    *sphere;
+    t_plane     *plane;
+    t_cylinder *cylinder;
+    t_mlx   *mlx;
+    int		width;
+	int		height;
+    t_data *img;
+}t_scene;
+
+
 ////////math f{}/////
 /* creat a point or a vector */
+double	sq(double num);
 t_tuple	*cpv(double x, double y, double z, double p_v);
 /* checks if its a point or a vector if true(1) its point else its vector */
 int ispoint(t_tuple *a);
@@ -224,6 +279,15 @@ t_sphere *spher(t_tuple *center, double raduis, int id);
 /* check rays sphere intersection and fill the t_intersect struct with object type and object and intersection points */
 t_intersect	*intersect(t_ray *ray, t_sphere *spher);
 t_ray *transform(t_ray *t, t_matrix *mat);
+/////init stuct/////
+
+void	init_scene(t_scene *scene);
+void init_camera(t_camera *cam,  float fov, float aspect_ratio);
+t_scene *allocat_scene(t_scene *scene);
+int minirt(char **av,t_scene * sc);
+int parser(char *av,t_scene *sc);
+//////camira
+void calculate_camera(t_scene *mt);
 
 //////end////
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
@@ -231,15 +295,15 @@ int check_file(char *s,int *fd);
 int check_identifier(char *s);
 double get_nb(char *s);
 int len2d(char **a);
-int fill_ambligth(t_amlight **al,char **s);
+int fill_ambligth(t_amlight *al,char **s);
 int sphere_handle(t_sphere **lt,char **s);
 int cylinder_handle(t_cylinder **lt,char **s);
 int Plane_handle(t_plane **lt,char **s);
-t_scene *read_it(int fd);
+int read_it(int fd, t_scene *scene);
 int fill_struct(t_scene *scene,char **buffer,int type);
 int ft_rang(double min,double num,double max);
 int light_handle(t_light **lt,char **s);
-int camera_handle(t_camera **cam,char **s);
+int camera_handle(t_camera **c,char **s);
 int ratio_check(char *s,double *i);
 int get_colors(t_color *color,char *s);
 int get_point(t_tuple *point,char *s);

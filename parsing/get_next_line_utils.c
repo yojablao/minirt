@@ -76,7 +76,7 @@ size_t	ft_strlen(const char *str)
 
 void	ft_strcat(char *dst, const char *src)
 {
-	size_t	ls;
+	// size_t	ls;
 	size_t	ld;
 	size_t	l;
 	size_t	i;
@@ -84,7 +84,7 @@ void	ft_strcat(char *dst, const char *src)
 	if (!dst || !src)
 		return ;
 	ld = ft_strlen(dst);
-	ls = ft_strlen(src);
+	// ls = ftZ	_strlen(src);
 	l = ld;
 	i = 0;
 	while (src[i] != '\0')

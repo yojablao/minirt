@@ -1,0 +1,866 @@
+==204789== Memcheck, a memory error detector
+==204789== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==204789== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==204789== Command: ./MRT
+==204789== 
+arg/n==204789== 
+==204789== HEAP SUMMARY:
+==204789==     in use at exit: 0 bytes in 0 blocks
+==204789==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==204789== 
+==204789== All heap blocks were freed -- no leaks are possible
+==204789== 
+==204789== For lists of detected and suppressed errors, rerun with: -s
+==204789== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==204837== Memcheck, a memory error detector
+==204837== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==204837== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==204837== Command: ./MRT
+==204837== 
+arg/n==204837== 
+==204837== HEAP SUMMARY:
+==204837==     in use at exit: 0 bytes in 0 blocks
+==204837==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==204837== 
+==204837== All heap blocks were freed -- no leaks are possible
+==204837== 
+==204837== For lists of detected and suppressed errors, rerun with: -s
+==204837== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==204903== Memcheck, a memory error detector
+==204903== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==204903== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==204903== Command: ./MRT
+==204903== 
+arg/n==204903== 
+==204903== HEAP SUMMARY:
+==204903==     in use at exit: 0 bytes in 0 blocks
+==204903==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==204903== 
+==204903== All heap blocks were freed -- no leaks are possible
+==204903== 
+==204903== For lists of detected and suppressed errors, rerun with: -s
+==204903== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==204969== Memcheck, a memory error detector
+==204969== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==204969== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==204969== Command: ./MRT
+==204969== 
+arg/n==204969== 
+==204969== HEAP SUMMARY:
+==204969==     in use at exit: 0 bytes in 0 blocks
+==204969==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==204969== 
+==204969== All heap blocks were freed -- no leaks are possible
+==204969== 
+==204969== For lists of detected and suppressed errors, rerun with: -s
+==204969== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==205021== Memcheck, a memory error detector
+==205021== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==205021== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==205021== Command: ./MRT
+==205021== 
+arg/n==205021== 
+==205021== HEAP SUMMARY:
+==205021==     in use at exit: 0 bytes in 0 blocks
+==205021==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==205021== 
+==205021== All heap blocks were freed -- no leaks are possible
+==205021== 
+==205021== For lists of detected and suppressed errors, rerun with: -s
+==205021== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==205065== Memcheck, a memory error detector
+==205065== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==205065== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==205065== Command: ./MRT
+==205065== 
+arg/n==205065== 
+==205065== HEAP SUMMARY:
+==205065==     in use at exit: 0 bytes in 0 blocks
+==205065==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==205065== 
+==205065== All heap blocks were freed -- no leaks are possible
+==205065== 
+==205065== For lists of detected and suppressed errors, rerun with: -s
+==205065== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==205108== Memcheck, a memory error detector
+==205108== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==205108== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==205108== Command: ./MRT
+==205108== 
+arg/n==205108== 
+==205108== HEAP SUMMARY:
+==205108==     in use at exit: 0 bytes in 0 blocks
+==205108==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==205108== 
+==205108== All heap blocks were freed -- no leaks are possible
+==205108== 
+==205108== For lists of detected and suppressed errors, rerun with: -s
+==205108== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==205153== Memcheck, a memory error detector
+==205153== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==205153== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==205153== Command: ./MRT
+==205153== 
+arg/n==205153== 
+==205153== HEAP SUMMARY:
+==205153==     in use at exit: 0 bytes in 0 blocks
+==205153==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==205153== 
+==205153== All heap blocks were freed -- no leaks are possible
+==205153== 
+==205153== For lists of detected and suppressed errors, rerun with: -s
+==205153== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==205196== Memcheck, a memory error detector
+==205196== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==205196== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==205196== Command: ./MRT
+==205196== 
+arg/n==205196== 
+==205196== HEAP SUMMARY:
+==205196==     in use at exit: 0 bytes in 0 blocks
+==205196==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==205196== 
+==205196== All heap blocks were freed -- no leaks are possible
+==205196== 
+==205196== For lists of detected and suppressed errors, rerun with: -s
+==205196== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==211614== Memcheck, a memory error detector
+==211614== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==211614== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==211614== Command: ./MRT
+==211614== 
+arg/n==211614== 
+==211614== HEAP SUMMARY:
+==211614==     in use at exit: 0 bytes in 0 blocks
+==211614==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==211614== 
+==211614== All heap blocks were freed -- no leaks are possible
+==211614== 
+==211614== For lists of detected and suppressed errors, rerun with: -s
+==211614== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262040== Memcheck, a memory error detector
+==262040== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262040== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262040== Command: ./MRT
+==262040== 
+arg/n==262040== 
+==262040== HEAP SUMMARY:
+==262040==     in use at exit: 0 bytes in 0 blocks
+==262040==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==262040== 
+==262040== All heap blocks were freed -- no leaks are possible
+==262040== 
+==262040== For lists of detected and suppressed errors, rerun with: -s
+==262040== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262101== Memcheck, a memory error detector
+==262101== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262101== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262101== Command: ./MRT
+==262101== 
+arg/n==262101== 
+==262101== HEAP SUMMARY:
+==262101==     in use at exit: 0 bytes in 0 blocks
+==262101==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==262101== 
+==262101== All heap blocks were freed -- no leaks are possible
+==262101== 
+==262101== For lists of detected and suppressed errors, rerun with: -s
+==262101== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262146== Memcheck, a memory error detector
+==262146== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262146== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262146== Command: ./MRT
+==262146== 
+arg/n==262146== 
+==262146== HEAP SUMMARY:
+==262146==     in use at exit: 0 bytes in 0 blocks
+==262146==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==262146== 
+==262146== All heap blocks were freed -- no leaks are possible
+==262146== 
+==262146== For lists of detected and suppressed errors, rerun with: -s
+==262146== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262183== Memcheck, a memory error detector
+==262183== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262183== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262183== Command: ./MRT
+==262183== 
+arg/n==262183== 
+==262183== HEAP SUMMARY:
+==262183==     in use at exit: 0 bytes in 0 blocks
+==262183==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==262183== 
+==262183== All heap blocks were freed -- no leaks are possible
+==262183== 
+==262183== For lists of detected and suppressed errors, rerun with: -s
+==262183== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262226== Memcheck, a memory error detector
+==262226== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262226== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262226== Command: ./MRT
+==262226== 
+arg/n==262226== 
+==262226== HEAP SUMMARY:
+==262226==     in use at exit: 0 bytes in 0 blocks
+==262226==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==262226== 
+==262226== All heap blocks were freed -- no leaks are possible
+==262226== 
+==262226== For lists of detected and suppressed errors, rerun with: -s
+==262226== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262269== Memcheck, a memory error detector
+==262269== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262269== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262269== Command: ./MRT
+==262269== 
+arg/n==262269== 
+==262269== HEAP SUMMARY:
+==262269==     in use at exit: 0 bytes in 0 blocks
+==262269==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==262269== 
+==262269== All heap blocks were freed -- no leaks are possible
+==262269== 
+==262269== For lists of detected and suppressed errors, rerun with: -s
+==262269== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262312== Memcheck, a memory error detector
+==262312== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262312== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262312== Command: ./MRT
+==262312== 
+arg/n==262312== 
+==262312== HEAP SUMMARY:
+==262312==     in use at exit: 0 bytes in 0 blocks
+==262312==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==262312== 
+==262312== All heap blocks were freed -- no leaks are possible
+==262312== 
+==262312== For lists of detected and suppressed errors, rerun with: -s
+==262312== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262349== Memcheck, a memory error detector
+==262349== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262349== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262349== Command: ./MRT
+==262349== 
+arg/n==262349== 
+==262349== HEAP SUMMARY:
+==262349==     in use at exit: 0 bytes in 0 blocks
+==262349==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==262349== 
+==262349== All heap blocks were freed -- no leaks are possible
+==262349== 
+==262349== For lists of detected and suppressed errors, rerun with: -s
+==262349== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262392== Memcheck, a memory error detector
+==262392== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262392== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262392== Command: ./MRT
+==262392== 
+arg/n==262392== 
+==262392== HEAP SUMMARY:
+==262392==     in use at exit: 0 bytes in 0 blocks
+==262392==   total heap usage: 1 allocs, 1 frees, 4,096 bytes allocated
+==262392== 
+==262392== All heap blocks were freed -- no leaks are possible
+==262392== 
+==262392== For lists of detected and suppressed errors, rerun with: -s
+==262392== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==262611== Memcheck, a memory error detector
+==262611== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262611== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262611== Command: ./MRT lol.rt
+==262611== 
+init done/nerror
+3
+check [A]
+done [A]
+[0.100000][255.000000][255.000000][255.000000]
+0
+check [(null)]
+done [(null)]
+5
+check [#]
+done [#]
+pars done/n==262611== 
+==262611== HEAP SUMMARY:
+==262611==     in use at exit: 932 bytes in 30 blocks
+==262611==   total heap usage: 38 allocs, 8 frees, 5,300 bytes allocated
+==262611== 
+==262611== 12 bytes in 3 blocks are indirectly lost in loss record 1 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10D9D4: norm (ft_split.c:72)
+==262611==    by 0x10DB0F: ft_split (ft_split.c:101)
+==262611==    by 0x109987: get_colors (check_fn.c:28)
+==262611==    by 0x10A4E6: fill_ambligth (parsing.c:18)
+==262611==    by 0x10A528: fill_struct (parsing.c:25)
+==262611==    by 0x10A981: pars_it (parsing.c:57)
+==262611==    by 0x10A9DC: read_it (parsing.c:84)
+==262611==    by 0x10AA47: parser (parsing.c:93)
+==262611==    by 0x10A47B: minirt (minirt.c:18)
+==262611==    by 0x10A44B: main (main.c:208)
+==262611== 
+==262611== 24 bytes in 1 blocks are indirectly lost in loss record 2 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B4FB: allocat_scene (ft_rang.c:26)
+==262611==    by 0x10A3F7: main (main.c:183)
+==262611== 
+==262611== 32 bytes in 1 blocks are indirectly lost in loss record 3 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B72E: cpv (tools.c:21)
+==262611==    by 0x10B609: init_scene (ft_rang.c:44)
+==262611==    by 0x10A424: main (main.c:186)
+==262611== 
+==262611== 32 bytes in 1 blocks are indirectly lost in loss record 4 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B72E: cpv (tools.c:21)
+==262611==    by 0x10B634: init_scene (ft_rang.c:45)
+==262611==    by 0x10A424: main (main.c:186)
+==262611== 
+==262611== 32 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B55C: allocat_scene (ft_rang.c:32)
+==262611==    by 0x10A3F7: main (main.c:183)
+==262611== 
+==262611== 32 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B571: allocat_scene (ft_rang.c:33)
+==262611==    by 0x10A3F7: main (main.c:183)
+==262611== 
+==262611== 33 bytes in 1 blocks are still reachable in loss record 7 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x109352: check_line (get_next_line.c:29)
+==262611==    by 0x109653: get_next_line (get_next_line.c:99)
+==262611==    by 0x10A9BE: read_it (parsing.c:80)
+==262611==    by 0x10AA47: parser (parsing.c:93)
+==262611==    by 0x10A47B: minirt (minirt.c:18)
+==262611==    by 0x10A44B: main (main.c:208)
+==262611== 
+==262611== 40 bytes in 8 blocks are indirectly lost in loss record 8 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10D9D4: norm (ft_split.c:72)
+==262611==    by 0x10DB0F: ft_split (ft_split.c:101)
+==262611==    by 0x10A8EA: pars_it (parsing.c:50)
+==262611==    by 0x10A9DC: read_it (parsing.c:84)
+==262611==    by 0x10AA47: parser (parsing.c:93)
+==262611==    by 0x10A47B: minirt (minirt.c:18)
+==262611==    by 0x10A44B: main (main.c:208)
+==262611== 
+==262611== 44 (32 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10DAD6: ft_split (ft_split.c:97)
+==262611==    by 0x109987: get_colors (check_fn.c:28)
+==262611==    by 0x10A4E6: fill_ambligth (parsing.c:18)
+==262611==    by 0x10A528: fill_struct (parsing.c:25)
+==262611==    by 0x10A981: pars_it (parsing.c:57)
+==262611==    by 0x10A9DC: read_it (parsing.c:84)
+==262611==    by 0x10AA47: parser (parsing.c:93)
+==262611==    by 0x10A47B: minirt (minirt.c:18)
+==262611==    by 0x10A44B: main (main.c:208)
+==262611== 
+==262611== 55 bytes in 3 blocks are definitely lost in loss record 10 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x109451: extract_line (get_next_line.c:56)
+==262611==    by 0x1095D3: readfd (get_next_line.c:86)
+==262611==    by 0x109618: get_next_line (get_next_line.c:96)
+==262611==    by 0x10A9BE: read_it (parsing.c:80)
+==262611==    by 0x10AA47: parser (parsing.c:93)
+==262611==    by 0x10A47B: minirt (minirt.c:18)
+==262611==    by 0x10A44B: main (main.c:208)
+==262611== 
+==262611== 64 bytes in 1 blocks are indirectly lost in loss record 11 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B4DE: allocat_scene (ft_rang.c:25)
+==262611==    by 0x10A3F7: main (main.c:183)
+==262611== 
+==262611== 72 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B51D: allocat_scene (ft_rang.c:29)
+==262611==    by 0x10A3F7: main (main.c:183)
+==262611== 
+==262611== 80 bytes in 1 blocks are indirectly lost in loss record 13 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B508: allocat_scene (ft_rang.c:28)
+==262611==    by 0x10A3F7: main (main.c:183)
+==262611== 
+==262611== 96 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B532: allocat_scene (ft_rang.c:30)
+==262611==    by 0x10A3F7: main (main.c:183)
+==262611== 
+==262611== 112 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B547: allocat_scene (ft_rang.c:31)
+==262611==    by 0x10A3F7: main (main.c:183)
+==262611== 
+==262611== 128 (88 direct, 40 indirect) bytes in 3 blocks are definitely lost in loss record 16 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10DAD6: ft_split (ft_split.c:97)
+==262611==    by 0x10A8EA: pars_it (parsing.c:50)
+==262611==    by 0x10A9DC: read_it (parsing.c:84)
+==262611==    by 0x10AA47: parser (parsing.c:93)
+==262611==    by 0x10A47B: minirt (minirt.c:18)
+==262611==    by 0x10A44B: main (main.c:208)
+==262611== 
+==262611== 328 (96 direct, 232 indirect) bytes in 1 blocks are definitely lost in loss record 17 of 17
+==262611==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262611==    by 0x10B4D0: allocat_scene (ft_rang.c:24)
+==262611==    by 0x10A3F7: main (main.c:183)
+==262611== 
+==262611== LEAK SUMMARY:
+==262611==    definitely lost: 615 bytes in 13 blocks
+==262611==    indirectly lost: 284 bytes in 16 blocks
+==262611==      possibly lost: 0 bytes in 0 blocks
+==262611==    still reachable: 33 bytes in 1 blocks
+==262611==         suppressed: 0 bytes in 0 blocks
+==262611== 
+==262611== For lists of detected and suppressed errors, rerun with: -s
+==262611== ERROR SUMMARY: 9 errors from 9 contexts (suppressed: 0 from 0)
+==262653== Memcheck, a memory error detector
+==262653== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262653== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262653== Command: ./MRT lol.rt
+==262653== 
+init done/nerror
+3
+check [A]
+done [A]
+[0.100000][255.000000][255.000000][255.000000]
+0
+check [(null)]
+done [(null)]
+5
+check [#]
+done [#]
+pars done/n==262653== 
+==262653== HEAP SUMMARY:
+==262653==     in use at exit: 932 bytes in 30 blocks
+==262653==   total heap usage: 38 allocs, 8 frees, 5,300 bytes allocated
+==262653== 
+==262653== 12 bytes in 3 blocks are indirectly lost in loss record 1 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10D9D4: norm (ft_split.c:72)
+==262653==    by 0x10DB0F: ft_split (ft_split.c:101)
+==262653==    by 0x109987: get_colors (check_fn.c:28)
+==262653==    by 0x10A4E6: fill_ambligth (parsing.c:18)
+==262653==    by 0x10A528: fill_struct (parsing.c:25)
+==262653==    by 0x10A981: pars_it (parsing.c:57)
+==262653==    by 0x10A9DC: read_it (parsing.c:84)
+==262653==    by 0x10AA47: parser (parsing.c:93)
+==262653==    by 0x10A47B: minirt (minirt.c:18)
+==262653==    by 0x10A44B: main (main.c:208)
+==262653== 
+==262653== 24 bytes in 1 blocks are indirectly lost in loss record 2 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B4FB: allocat_scene (ft_rang.c:26)
+==262653==    by 0x10A3F7: main (main.c:183)
+==262653== 
+==262653== 32 bytes in 1 blocks are indirectly lost in loss record 3 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B72E: cpv (tools.c:21)
+==262653==    by 0x10B609: init_scene (ft_rang.c:44)
+==262653==    by 0x10A424: main (main.c:186)
+==262653== 
+==262653== 32 bytes in 1 blocks are indirectly lost in loss record 4 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B72E: cpv (tools.c:21)
+==262653==    by 0x10B634: init_scene (ft_rang.c:45)
+==262653==    by 0x10A424: main (main.c:186)
+==262653== 
+==262653== 32 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B55C: allocat_scene (ft_rang.c:32)
+==262653==    by 0x10A3F7: main (main.c:183)
+==262653== 
+==262653== 32 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B571: allocat_scene (ft_rang.c:33)
+==262653==    by 0x10A3F7: main (main.c:183)
+==262653== 
+==262653== 33 bytes in 1 blocks are still reachable in loss record 7 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x109352: check_line (get_next_line.c:29)
+==262653==    by 0x109653: get_next_line (get_next_line.c:99)
+==262653==    by 0x10A9BE: read_it (parsing.c:80)
+==262653==    by 0x10AA47: parser (parsing.c:93)
+==262653==    by 0x10A47B: minirt (minirt.c:18)
+==262653==    by 0x10A44B: main (main.c:208)
+==262653== 
+==262653== 40 bytes in 8 blocks are indirectly lost in loss record 8 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10D9D4: norm (ft_split.c:72)
+==262653==    by 0x10DB0F: ft_split (ft_split.c:101)
+==262653==    by 0x10A8EA: pars_it (parsing.c:50)
+==262653==    by 0x10A9DC: read_it (parsing.c:84)
+==262653==    by 0x10AA47: parser (parsing.c:93)
+==262653==    by 0x10A47B: minirt (minirt.c:18)
+==262653==    by 0x10A44B: main (main.c:208)
+==262653== 
+==262653== 44 (32 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10DAD6: ft_split (ft_split.c:97)
+==262653==    by 0x109987: get_colors (check_fn.c:28)
+==262653==    by 0x10A4E6: fill_ambligth (parsing.c:18)
+==262653==    by 0x10A528: fill_struct (parsing.c:25)
+==262653==    by 0x10A981: pars_it (parsing.c:57)
+==262653==    by 0x10A9DC: read_it (parsing.c:84)
+==262653==    by 0x10AA47: parser (parsing.c:93)
+==262653==    by 0x10A47B: minirt (minirt.c:18)
+==262653==    by 0x10A44B: main (main.c:208)
+==262653== 
+==262653== 55 bytes in 3 blocks are definitely lost in loss record 10 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x109451: extract_line (get_next_line.c:56)
+==262653==    by 0x1095D3: readfd (get_next_line.c:86)
+==262653==    by 0x109618: get_next_line (get_next_line.c:96)
+==262653==    by 0x10A9BE: read_it (parsing.c:80)
+==262653==    by 0x10AA47: parser (parsing.c:93)
+==262653==    by 0x10A47B: minirt (minirt.c:18)
+==262653==    by 0x10A44B: main (main.c:208)
+==262653== 
+==262653== 64 bytes in 1 blocks are indirectly lost in loss record 11 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B4DE: allocat_scene (ft_rang.c:25)
+==262653==    by 0x10A3F7: main (main.c:183)
+==262653== 
+==262653== 72 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B51D: allocat_scene (ft_rang.c:29)
+==262653==    by 0x10A3F7: main (main.c:183)
+==262653== 
+==262653== 80 bytes in 1 blocks are indirectly lost in loss record 13 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B508: allocat_scene (ft_rang.c:28)
+==262653==    by 0x10A3F7: main (main.c:183)
+==262653== 
+==262653== 96 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B532: allocat_scene (ft_rang.c:30)
+==262653==    by 0x10A3F7: main (main.c:183)
+==262653== 
+==262653== 112 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B547: allocat_scene (ft_rang.c:31)
+==262653==    by 0x10A3F7: main (main.c:183)
+==262653== 
+==262653== 128 (88 direct, 40 indirect) bytes in 3 blocks are definitely lost in loss record 16 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10DAD6: ft_split (ft_split.c:97)
+==262653==    by 0x10A8EA: pars_it (parsing.c:50)
+==262653==    by 0x10A9DC: read_it (parsing.c:84)
+==262653==    by 0x10AA47: parser (parsing.c:93)
+==262653==    by 0x10A47B: minirt (minirt.c:18)
+==262653==    by 0x10A44B: main (main.c:208)
+==262653== 
+==262653== 328 (96 direct, 232 indirect) bytes in 1 blocks are definitely lost in loss record 17 of 17
+==262653==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262653==    by 0x10B4D0: allocat_scene (ft_rang.c:24)
+==262653==    by 0x10A3F7: main (main.c:183)
+==262653== 
+==262653== LEAK SUMMARY:
+==262653==    definitely lost: 615 bytes in 13 blocks
+==262653==    indirectly lost: 284 bytes in 16 blocks
+==262653==      possibly lost: 0 bytes in 0 blocks
+==262653==    still reachable: 33 bytes in 1 blocks
+==262653==         suppressed: 0 bytes in 0 blocks
+==262653== 
+==262653== For lists of detected and suppressed errors, rerun with: -s
+==262653== ERROR SUMMARY: 9 errors from 9 contexts (suppressed: 0 from 0)
+==262700== Memcheck, a memory error detector
+==262700== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262700== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262700== Command: ./MRT lol.rt
+==262700== 
+init done/nerror
+3
+check [A]
+done [A]
+[0.100000][255.000000][255.000000][255.000000]
+0
+check [(null)]
+done [(null)]
+5
+check [#]
+done [#]
+pars done/n==262700== 
+==262700== HEAP SUMMARY:
+==262700==     in use at exit: 932 bytes in 30 blocks
+==262700==   total heap usage: 38 allocs, 8 frees, 5,300 bytes allocated
+==262700== 
+==262700== 12 bytes in 3 blocks are indirectly lost in loss record 1 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10D9D4: norm (ft_split.c:72)
+==262700==    by 0x10DB0F: ft_split (ft_split.c:101)
+==262700==    by 0x109987: get_colors (check_fn.c:28)
+==262700==    by 0x10A4E6: fill_ambligth (parsing.c:18)
+==262700==    by 0x10A528: fill_struct (parsing.c:25)
+==262700==    by 0x10A981: pars_it (parsing.c:57)
+==262700==    by 0x10A9DC: read_it (parsing.c:84)
+==262700==    by 0x10AA47: parser (parsing.c:93)
+==262700==    by 0x10A47B: minirt (minirt.c:18)
+==262700==    by 0x10A44B: main (main.c:208)
+==262700== 
+==262700== 24 bytes in 1 blocks are indirectly lost in loss record 2 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B4FB: allocat_scene (ft_rang.c:26)
+==262700==    by 0x10A3F7: main (main.c:183)
+==262700== 
+==262700== 32 bytes in 1 blocks are indirectly lost in loss record 3 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B72E: cpv (tools.c:21)
+==262700==    by 0x10B609: init_scene (ft_rang.c:44)
+==262700==    by 0x10A424: main (main.c:186)
+==262700== 
+==262700== 32 bytes in 1 blocks are indirectly lost in loss record 4 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B72E: cpv (tools.c:21)
+==262700==    by 0x10B634: init_scene (ft_rang.c:45)
+==262700==    by 0x10A424: main (main.c:186)
+==262700== 
+==262700== 32 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B55C: allocat_scene (ft_rang.c:32)
+==262700==    by 0x10A3F7: main (main.c:183)
+==262700== 
+==262700== 32 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B571: allocat_scene (ft_rang.c:33)
+==262700==    by 0x10A3F7: main (main.c:183)
+==262700== 
+==262700== 33 bytes in 1 blocks are still reachable in loss record 7 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x109352: check_line (get_next_line.c:29)
+==262700==    by 0x109653: get_next_line (get_next_line.c:99)
+==262700==    by 0x10A9BE: read_it (parsing.c:80)
+==262700==    by 0x10AA47: parser (parsing.c:93)
+==262700==    by 0x10A47B: minirt (minirt.c:18)
+==262700==    by 0x10A44B: main (main.c:208)
+==262700== 
+==262700== 40 bytes in 8 blocks are indirectly lost in loss record 8 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10D9D4: norm (ft_split.c:72)
+==262700==    by 0x10DB0F: ft_split (ft_split.c:101)
+==262700==    by 0x10A8EA: pars_it (parsing.c:50)
+==262700==    by 0x10A9DC: read_it (parsing.c:84)
+==262700==    by 0x10AA47: parser (parsing.c:93)
+==262700==    by 0x10A47B: minirt (minirt.c:18)
+==262700==    by 0x10A44B: main (main.c:208)
+==262700== 
+==262700== 44 (32 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10DAD6: ft_split (ft_split.c:97)
+==262700==    by 0x109987: get_colors (check_fn.c:28)
+==262700==    by 0x10A4E6: fill_ambligth (parsing.c:18)
+==262700==    by 0x10A528: fill_struct (parsing.c:25)
+==262700==    by 0x10A981: pars_it (parsing.c:57)
+==262700==    by 0x10A9DC: read_it (parsing.c:84)
+==262700==    by 0x10AA47: parser (parsing.c:93)
+==262700==    by 0x10A47B: minirt (minirt.c:18)
+==262700==    by 0x10A44B: main (main.c:208)
+==262700== 
+==262700== 55 bytes in 3 blocks are definitely lost in loss record 10 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x109451: extract_line (get_next_line.c:56)
+==262700==    by 0x1095D3: readfd (get_next_line.c:86)
+==262700==    by 0x109618: get_next_line (get_next_line.c:96)
+==262700==    by 0x10A9BE: read_it (parsing.c:80)
+==262700==    by 0x10AA47: parser (parsing.c:93)
+==262700==    by 0x10A47B: minirt (minirt.c:18)
+==262700==    by 0x10A44B: main (main.c:208)
+==262700== 
+==262700== 64 bytes in 1 blocks are indirectly lost in loss record 11 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B4DE: allocat_scene (ft_rang.c:25)
+==262700==    by 0x10A3F7: main (main.c:183)
+==262700== 
+==262700== 72 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B51D: allocat_scene (ft_rang.c:29)
+==262700==    by 0x10A3F7: main (main.c:183)
+==262700== 
+==262700== 80 bytes in 1 blocks are indirectly lost in loss record 13 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B508: allocat_scene (ft_rang.c:28)
+==262700==    by 0x10A3F7: main (main.c:183)
+==262700== 
+==262700== 96 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B532: allocat_scene (ft_rang.c:30)
+==262700==    by 0x10A3F7: main (main.c:183)
+==262700== 
+==262700== 112 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B547: allocat_scene (ft_rang.c:31)
+==262700==    by 0x10A3F7: main (main.c:183)
+==262700== 
+==262700== 128 (88 direct, 40 indirect) bytes in 3 blocks are definitely lost in loss record 16 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10DAD6: ft_split (ft_split.c:97)
+==262700==    by 0x10A8EA: pars_it (parsing.c:50)
+==262700==    by 0x10A9DC: read_it (parsing.c:84)
+==262700==    by 0x10AA47: parser (parsing.c:93)
+==262700==    by 0x10A47B: minirt (minirt.c:18)
+==262700==    by 0x10A44B: main (main.c:208)
+==262700== 
+==262700== 328 (96 direct, 232 indirect) bytes in 1 blocks are definitely lost in loss record 17 of 17
+==262700==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262700==    by 0x10B4D0: allocat_scene (ft_rang.c:24)
+==262700==    by 0x10A3F7: main (main.c:183)
+==262700== 
+==262700== LEAK SUMMARY:
+==262700==    definitely lost: 615 bytes in 13 blocks
+==262700==    indirectly lost: 284 bytes in 16 blocks
+==262700==      possibly lost: 0 bytes in 0 blocks
+==262700==    still reachable: 33 bytes in 1 blocks
+==262700==         suppressed: 0 bytes in 0 blocks
+==262700== 
+==262700== For lists of detected and suppressed errors, rerun with: -s
+==262700== ERROR SUMMARY: 9 errors from 9 contexts (suppressed: 0 from 0)
+==262743== Memcheck, a memory error detector
+==262743== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==262743== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==262743== Command: ./MRT lol.rt
+==262743== 
+init done/nerror
+3
+check [A]
+done [A]
+[0.100000][255.000000][255.000000][255.000000]
+0
+check [(null)]
+done [(null)]
+5
+check [#]
+done [#]
+pars done/n==262743== 
+==262743== HEAP SUMMARY:
+==262743==     in use at exit: 932 bytes in 30 blocks
+==262743==   total heap usage: 38 allocs, 8 frees, 5,300 bytes allocated
+==262743== 
+==262743== 12 bytes in 3 blocks are indirectly lost in loss record 1 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10D9D4: norm (ft_split.c:72)
+==262743==    by 0x10DB0F: ft_split (ft_split.c:101)
+==262743==    by 0x109987: get_colors (check_fn.c:28)
+==262743==    by 0x10A4E6: fill_ambligth (parsing.c:18)
+==262743==    by 0x10A528: fill_struct (parsing.c:25)
+==262743==    by 0x10A981: pars_it (parsing.c:57)
+==262743==    by 0x10A9DC: read_it (parsing.c:84)
+==262743==    by 0x10AA47: parser (parsing.c:93)
+==262743==    by 0x10A47B: minirt (minirt.c:18)
+==262743==    by 0x10A44B: main (main.c:208)
+==262743== 
+==262743== 24 bytes in 1 blocks are indirectly lost in loss record 2 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B4FB: allocat_scene (ft_rang.c:26)
+==262743==    by 0x10A3F7: main (main.c:183)
+==262743== 
+==262743== 32 bytes in 1 blocks are indirectly lost in loss record 3 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B72E: cpv (tools.c:21)
+==262743==    by 0x10B609: init_scene (ft_rang.c:44)
+==262743==    by 0x10A424: main (main.c:186)
+==262743== 
+==262743== 32 bytes in 1 blocks are indirectly lost in loss record 4 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B72E: cpv (tools.c:21)
+==262743==    by 0x10B634: init_scene (ft_rang.c:45)
+==262743==    by 0x10A424: main (main.c:186)
+==262743== 
+==262743== 32 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B55C: allocat_scene (ft_rang.c:32)
+==262743==    by 0x10A3F7: main (main.c:183)
+==262743== 
+==262743== 32 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B571: allocat_scene (ft_rang.c:33)
+==262743==    by 0x10A3F7: main (main.c:183)
+==262743== 
+==262743== 33 bytes in 1 blocks are still reachable in loss record 7 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x109352: check_line (get_next_line.c:29)
+==262743==    by 0x109653: get_next_line (get_next_line.c:99)
+==262743==    by 0x10A9BE: read_it (parsing.c:80)
+==262743==    by 0x10AA47: parser (parsing.c:93)
+==262743==    by 0x10A47B: minirt (minirt.c:18)
+==262743==    by 0x10A44B: main (main.c:208)
+==262743== 
+==262743== 40 bytes in 8 blocks are indirectly lost in loss record 8 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10D9D4: norm (ft_split.c:72)
+==262743==    by 0x10DB0F: ft_split (ft_split.c:101)
+==262743==    by 0x10A8EA: pars_it (parsing.c:50)
+==262743==    by 0x10A9DC: read_it (parsing.c:84)
+==262743==    by 0x10AA47: parser (parsing.c:93)
+==262743==    by 0x10A47B: minirt (minirt.c:18)
+==262743==    by 0x10A44B: main (main.c:208)
+==262743== 
+==262743== 44 (32 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10DAD6: ft_split (ft_split.c:97)
+==262743==    by 0x109987: get_colors (check_fn.c:28)
+==262743==    by 0x10A4E6: fill_ambligth (parsing.c:18)
+==262743==    by 0x10A528: fill_struct (parsing.c:25)
+==262743==    by 0x10A981: pars_it (parsing.c:57)
+==262743==    by 0x10A9DC: read_it (parsing.c:84)
+==262743==    by 0x10AA47: parser (parsing.c:93)
+==262743==    by 0x10A47B: minirt (minirt.c:18)
+==262743==    by 0x10A44B: main (main.c:208)
+==262743== 
+==262743== 55 bytes in 3 blocks are definitely lost in loss record 10 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x109451: extract_line (get_next_line.c:56)
+==262743==    by 0x1095D3: readfd (get_next_line.c:86)
+==262743==    by 0x109618: get_next_line (get_next_line.c:96)
+==262743==    by 0x10A9BE: read_it (parsing.c:80)
+==262743==    by 0x10AA47: parser (parsing.c:93)
+==262743==    by 0x10A47B: minirt (minirt.c:18)
+==262743==    by 0x10A44B: main (main.c:208)
+==262743== 
+==262743== 64 bytes in 1 blocks are indirectly lost in loss record 11 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B4DE: allocat_scene (ft_rang.c:25)
+==262743==    by 0x10A3F7: main (main.c:183)
+==262743== 
+==262743== 72 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B51D: allocat_scene (ft_rang.c:29)
+==262743==    by 0x10A3F7: main (main.c:183)
+==262743== 
+==262743== 80 bytes in 1 blocks are indirectly lost in loss record 13 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B508: allocat_scene (ft_rang.c:28)
+==262743==    by 0x10A3F7: main (main.c:183)
+==262743== 
+==262743== 96 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B532: allocat_scene (ft_rang.c:30)
+==262743==    by 0x10A3F7: main (main.c:183)
+==262743== 
+==262743== 112 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B547: allocat_scene (ft_rang.c:31)
+==262743==    by 0x10A3F7: main (main.c:183)
+==262743== 
+==262743== 128 (88 direct, 40 indirect) bytes in 3 blocks are definitely lost in loss record 16 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10DAD6: ft_split (ft_split.c:97)
+==262743==    by 0x10A8EA: pars_it (parsing.c:50)
+==262743==    by 0x10A9DC: read_it (parsing.c:84)
+==262743==    by 0x10AA47: parser (parsing.c:93)
+==262743==    by 0x10A47B: minirt (minirt.c:18)
+==262743==    by 0x10A44B: main (main.c:208)
+==262743== 
+==262743== 328 (96 direct, 232 indirect) bytes in 1 blocks are definitely lost in loss record 17 of 17
+==262743==    at 0x4846828: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==262743==    by 0x10B4D0: allocat_scene (ft_rang.c:24)
+==262743==    by 0x10A3F7: main (main.c:183)
+==262743== 
+==262743== LEAK SUMMARY:
+==262743==    definitely lost: 615 bytes in 13 blocks
+==262743==    indirectly lost: 284 bytes in 16 blocks
+==262743==      possibly lost: 0 bytes in 0 blocks
+==262743==    still reachable: 33 bytes in 1 blocks
+==262743==         suppressed: 0 bytes in 0 blocks
+==262743== 
+==262743== For lists of detected and suppressed errors, rerun with: -s
+==262743== ERROR SUMMARY: 9 errors from 9 contexts (suppressed: 0 from 0)

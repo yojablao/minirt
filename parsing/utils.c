@@ -19,7 +19,7 @@ int check_file(char *s,int *fd)
 
     if (!s)
         return (1);
-    i = strlen(s) - 1;
+    i = ft_strlen(s) - 1;
     if (i > 2)
     {
 
@@ -37,23 +37,27 @@ int check_file(char *s,int *fd)
 }
 int check_identifier(char *s)
 {
+    s[1500];
     if(!s)
         return(-1);
-    else if(ft_strncmp(s,"A",ft_strlen(s)) == 0)
-        return (1);
-    else if(ft_strncmp(s,"C",ft_strlen(s)) == 0)
+    else if(ft_strncmp(s,"A",15) == 0)
+        return (s[1500],1);
+    else if(ft_strncmp(s,"C",2) == 0)
         return (2);
-    else if(ft_strncmp(s,"L",ft_strlen(s)) == 0)
+    else if(ft_strncmp(s,"L",2) == 0)
         return (3);
-    else if(ft_strncmp(s,"sp",ft_strlen(s)) == 0)
+    else if(ft_strncmp(s,"sp",3) == 0)
         return (4);
-    else if(ft_strncmp(s,"pl",ft_strlen(s)) == 0)
+    else if(ft_strncmp(s,"pl",3) == 0)
         return (5);
-    else if(ft_strncmp(s,"cy",ft_strlen(s)) == 0)
+    else if(ft_strncmp(s,"cy",3) == 0)
         return (6);
+    else if (s[0] == '\n' || s[0] == '#' )
+        return(-1);
     else
         return (0);
 }
+
 int handel_sing(char *s, int *i)
 {
     if (s[0] == '-')

@@ -645,21 +645,21 @@ t_intersect	*intersect(t_ray *ray, t_sphere *spher)
 	return (inter);
 }
 
-double *intersections(int num, ...)
-{
-	va_list a;
-	double *arr;
-	int i;
+// double *intersections(int num, ...)
+// // {
+// 	va_list a;
+// 	double *arr;
+// 	int i;
 
-	i = -1;
-	arr = malloc (num * sizeof(double));
-	if (!arr)
-		return (NULL);
-	va_start(a, num);
-	while (++i < num)
-		arr[i] = va_arg(a, double);
-	return (arr);
-}
+// 	i = -1;
+// 	arr = malloc (num * sizeof(double));
+// 	if (!arr)
+// 		return (NULL);
+// 	va_start(a, num);
+// 	while (++i < num)
+// 		arr[i] = va_arg(a, double);
+// 	return (arr);
+// }
 double ft_max(double *arr, int num)
 {
 	int i;

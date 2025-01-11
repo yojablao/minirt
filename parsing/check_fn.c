@@ -54,14 +54,13 @@ int get_point(t_tuple *point,char *s)
     char **buffer;
 
     buffer = ft_split(s,',',',');
-    int i = 0;
+    int i = -1;
     if(!buffer[0] || !buffer[1] || !buffer[2])
         return(0);
-    while(buffer[i])
+    while(buffer[++i])
     {
       if(!check_if_nb(buffer[i]))
         return(0);
-        i++;
     }
     point->x = get_nb(buffer[0]);
     point->y = get_nb(buffer[1]);
