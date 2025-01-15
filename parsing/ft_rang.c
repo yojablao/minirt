@@ -27,16 +27,18 @@ t_scene *allocat_scene(t_scene *scene)
     // scene->amligth =  malloc(sizeof(t_amlight));
     // scene->ligth =  malloc(sizeof(t_light));
     // scene->sphere =  malloc(sizeof(t_sphere));
+    // scene->sphere->head =  malloc(sizeof(t_sphere));
     // scene->plane =  malloc(sizeof(t_plane));
     // scene->cylinder =  malloc(sizeof(t_cylinder));
-    scene->mlx =  malloc(sizeof(t_mlx));
-    scene->img =  malloc(sizeof(t_data));
+    // scene->mlx =  malloc(sizeof(t_mlx));
+    // scene->img =  malloc(sizeof(t_data));
+	return(scene);
 
 }
 void	init_scene(t_scene *scene)
 {
-	scene->width = 800;
-	scene->height = 800;
+	scene->width = 500;
+	scene->height = 500;
 	scene->amligth.r = -1.0;
 	scene->amligth.color.r = 0;
 	scene->amligth.color.g = 0;
@@ -54,6 +56,20 @@ void	init_scene(t_scene *scene)
 	scene->sphere = NULL;
 	scene->plane = NULL;
 	scene->cylinder = NULL;
-	scene->mlx = NULL;
-	scene->img = NULL;
+	// scene->mlx = NULL;
+	// scene->img = NULL;
+}
+float	ft_comp_float(float f1, float f2)
+{
+	float	diff;
+	float	precision;
+
+	precision = 0.000001;
+	if (f1 == f2)
+		return (0.0);
+	diff = (f1) - (f2);
+	if (fabs(diff) < precision)
+		return (0.0);
+	else
+		return (diff);
 }

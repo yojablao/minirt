@@ -13,7 +13,7 @@
 #include "tool.h"
 
 #define WINDOW_WIDTH 500
-#define WINDOW_HEIGHT 600
+#define WINDOW_HEIGHT 500
 #define PI 3.14159265359
 
 typedef struct l_data {
@@ -31,12 +31,34 @@ double map(double unscaled_num,double min,double max ,double oldmax)
 {
 	return((max - min) * (unscaled_num - 0) / (oldmax - 0) + min);
 }
-void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
-{
-	char	*dst;
+// void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
+// {
+// 	char	*dst;
 
-	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
-	*(unsigned int*)dst = color;
+// 	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
+// 	*(unsigned int*)dst = color;
+// }
+void my_mlx_pixel_put(t_data *data, int x, int y, int color)
+{
+    char *dst;
+
+    // Check if (x, y) is within the bounds of the image
+    if (x >= 0 && x < WIDTH && y >= 0 && y < HIGTH) {
+        // Calculate the address of the pixel
+        dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
+
+        // Write the color to the pixel based on bits_per_pixel
+        if (data->bits_per_pixel == 32) {
+            *(unsigned int*)dst = color;
+        } else if (data->bits_per_pixel == 24) {
+            dst[0] = (color >> 16) & 0xFF; // Red
+            dst[1] = (color >> 8) & 0xFF;  // Green
+            dst[2] = color & 0xFF;         // Blue
+        } else {
+            // Handle other pixel formats if needed
+            fprintf(stderr, "Error: Unsupported bits_per_pixel value\n");
+        }
+    }
 }
 void project_isometric(t_tuple p, int *x, int *y) {
     double angle = PI / 6;
@@ -182,6 +204,59 @@ void calculate_camera(t_scene *mt)
            mt->camera->cam_ray->d->x, mt->camera->cam_ray->d->y,
            mt->camera->cam_ray->d->z);
 }
+// #define WIDTH 800
+// #define HEIGHT 600
+
+// int main() {
+//     // Initialize MiniLibX
+//     void *mlx = mlx_init();
+//     if (!mlx) {
+//         fprintf(stderr, "Error: MiniLibX initialization failed\n");
+//         return 1;
+//     }
+
+//     // Create a window
+//     void *win = mlx_new_window(mlx, WIDTH, HEIGHT, "Direct Drawing");
+//     if (!win) {
+//         fprintf(stderr, "Error: Window creation failed\n");
+//         mlx_destroy_display(mlx);
+//         return 1;
+//     }
+
+//     // Create an image (acts as a "virtual window")
+//     void *img = mlx_new_image(mlx, WIDTH, HEIGHT);
+//     if (!img) {
+//         fprintf(stderr, "Error: Image creation failed\n");
+//         mlx_destroy_window(mlx, win);
+//         mlx_destroy_display(mlx);
+//         return 1;
+//     }
+
+//     // Get the image's pixel data
+//     int bpp, size_line, endian; 
+//     char *data = mlx_get_data_addr(img, &bpp, &size_line, &endian);
+
+//     // Draw directly to the image (acts as the "window")
+//     for (int y = 0; y < HEIGHT; y++) {
+//         for (int x = 0; x < WIDTH; x++) {
+//             int color = 0xFF0000; // Red color
+//             *(int *)(data + y * size_line + x * (bpp / 8)) = color;
+//         }
+//     }
+
+//     // Put the image into the window
+//     mlx_put_image_to_window(mlx, win, img, 0, 0);
+
+//     // Start the MiniLibX loop to keep the window open
+//     mlx_loop(mlx);
+
+//     // Clean up (this will never be reached in this example)
+//     // mlx_destroy_image(mlx, img);
+//     // mlx_destroy_window(mlx, win);
+//     // mlx_destroy_display(mlx);
+//     return 0;
+// }
+
 int	main(int ac, char **av)
 {
 	t_scene	*scene;
@@ -195,28 +270,25 @@ int	main(int ac, char **av)
 	if (!scene)
 		return(printf("broooh"));
 	init_scene(scene);
-    // while (1)
+    void *mlx;
+    void *mlx_win;
+    printf("%d\n",scene->height);
+   mlx = mlx_init();
+    mlx_win = mlx_new_window(mlx, 500, 500, "Hello world!");
+    // if (!scene->mlx->mlx)
     // {
-    //     /* code */
+    //     free(scene->mlx);
+    //     free(scene);
+    //     return (printf("Failed to initialize mlx\n"));
     // }
-    
-	// scene->mlx->mlx = mlx_init(scene->width, scene->height, "miniRT", 1);
-	// if (!scene->mlx)
-	// {
-	// 	free(scene);
-	// 	m_error();
-	// }
-	// scene->img = mlx_new_image(scene->mlx->mlx, scene->width, scene->height);
-	// if (!scene->img)
-	// {
-	// 	free(scene);
-	// 	free(scene->mlx);
-	// 	error();
-	// }
-	// return (0);
-    // printf("init done\n");
+    scene->mlx.mlx = mlx;
+    scene->mlx.window = mlx_win;
 
-	return (minirt(av, scene));
+    t_data img;
+    img.img= mlx_new_image(mlx, 500, scene->height);
+    img.addr = mlx_get_data_addr(img.img, &img.bits_per_pixel, &img.line_length, &img.endian);
+    scene->mlx.img = &img;
+	return (minirt(av, &scene));
 }
 
 

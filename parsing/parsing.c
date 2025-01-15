@@ -20,27 +20,40 @@ int fill_ambligth(t_amlight *al,char **s)
     return(1);
 }
 
-int fill_struct(t_scene *scene,char **buffer,int type)
+int fill_struct(t_scene **scene,char **buffer,int type)
 {
-    if (type == 1 && fill_ambligth(&scene->amligth,buffer))
-            return (printf("[%f][%f][%f][%f]\n",scene->amligth.r,scene->amligth.color.r,scene->amligth.color.b,scene->amligth.color.g),1);
-    else if (type == 2 && camera_handle(&scene->camera,buffer))
-        return (printf("CAMIRA ->{%f}[%f][%f][%f][%f]\n",scene->camera->fov,scene->camera->cam_ray->o->x,scene->camera->cam_ray->o->y,scene->camera->cam_ray->o->z,scene->camera->fov),1);
-    else if (type == 3 && light_handle(&scene->ligth,buffer))
-        return (printf("LIGHT >[%f][%f][%f][%f]\n",scene->ligth->r,scene->ligth->color.r,scene->ligth->color.b,scene->ligth->color.g),1);
-    else if (type == 4 && sphere_handle(&scene->sphere,buffer))
-            return(print_point(*scene->sphere->center,scene->sphere->color),1);
-    else if (type == 5 && Plane_handle(&scene->plane,buffer))
-        return (print_point(scene->plane->point,scene->plane->color),1);
-    else if (type == 6 && cylinder_handle(&scene->cylinder,buffer))
-        return (print_point(scene->cylinder->center,scene->cylinder->color),1);
+    if (type == 1 && fill_ambligth(&(*scene)->amligth,buffer))
+            return (1);
+    else if (type == 2 && camera_handle(&(*scene)->camera,buffer))
+        return (1);
+    else if (type == 3 && light_handle(&(*scene)->ligth,buffer))
+        return (1);
+    else if (type == 4 && sphere_handle(&(*scene)->sphere,buffer))
+    {
+
+        return(1);
+    }
+    else if (type == 5 && Plane_handle(&(*scene)->plane,buffer))
+        return (1);
+    else if (type == 6 && cylinder_handle(&(*scene)->cylinder,buffer))
+        return (1);
     else if (type == -1)
         return (1);
     else
         return(printf("nagh type[%d]\n",type),0);
 }
+void pintit(t_scene **l)
+{
 
-int pars_it(char *s,t_scene *scene)
+    t_sphere *tmp = (*l)->sphere;
+    while (tmp)
+    {
+        printf("sphere[%f][%f][%f][%f][%f][%f][%f][%f][%lf]\n",tmp->center->x,tmp->center->y,tmp->center->z,tmp->color.r,tmp->color.g,tmp->color.b,tmp->diameter,tmp->id);
+        tmp = tmp->next;
+    }
+    
+}
+int pars_it(char *s,t_scene **scene)
 {
     char **buffer;
     int type;
@@ -55,6 +68,8 @@ int pars_it(char *s,t_scene *scene)
         return(0);
     if(!fill_struct(scene,buffer,type))
         return(0);
+    // (*scene)->sphere = (*scene)->sphere->head;
+
     return(1);
 }
 // t_scene  *init_scene_n(t_scene *s)
@@ -68,11 +83,11 @@ int pars_it(char *s,t_scene *scene)
 //     s->plane = NULL;
 //     return(s);
 // }
-int read_it(int fd, t_scene *scene)
+int read_it(int fd, t_scene **scene)
 {
     char *buffer;
 
-    if (!scene)
+    if (!(*scene))
         return (1);
     while (1)
     {
@@ -85,12 +100,13 @@ int read_it(int fd, t_scene *scene)
     }
     return (0);
 }
-int parser(char *av,t_scene *sc)
+int parser(char *av,t_scene **sc)
 {
     int fd;
     // printf("error\n");
     if(check_file(av,&fd) || read_it(fd,sc))
         return(printf("error\n"), 1);
+                pintit(sc);
     return 0;
     
 }

@@ -17,13 +17,12 @@
 #include <stdarg.h>
 #include <mlx.h>
 
-#include <key_linux.h>
-
 // # if defined(__APPLE__)
 // #  include <key_macos.h>
 // # else
-// # endif
+// # 
 
+#define	EPSILON 0.00001
 
 #define	EPSILON 0.00001
 #define	π 3.1415926535

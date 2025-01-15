@@ -23,10 +23,10 @@
 #include "minilibx_linux/mlx.h"
 
 #define HIGTH 500
-#define WITH 500
+#define WIDTH 500
 
 #define	EPSILON 0.00001
-#define	π 3.1415926535
+#define	I 3.1415926535
 #define SPH 1
 #define LAST_P 
 
@@ -96,16 +96,16 @@ typedef struct s_camera
 // 	t_vector	right_u;
 
 // }	t_camera;
-typedef struct s_draw
+typedef struct s_pixels
 {
-	int			mlx_x;
-	int			mlx_y;
+	int			win_x;
+	int			win_y;
 	int			color;
 	float		x_ray;
 	float		y_ray;
 	float		z_ray;
 	t_tuple	*ray;
-}	t_draw;
+}	t_pixels;
 typedef struct s_light
 {
     t_tuple point;
@@ -118,6 +118,8 @@ typedef struct s_light
 
 typedef struct s_sphere
 {
+	struct s_sphere *head;
+	int is_head;
     t_tuple *center;
     double r;
     int id;
@@ -152,15 +154,6 @@ typedef struct s_cylinder
     struct s_cylinder *next;
 }t_cylinder;
 
-typedef struct mlx
-{
-	void*		mlx;
-	void*		window;
-	int		width;
-	int		height;
-	double		delta_time;
-}	t_mlx;
-
 typedef struct	s_data {
 	void	*img;
 	char	*addr;
@@ -168,6 +161,28 @@ typedef struct	s_data {
 	int		line_length;
 	int		endian;
 }				t_data;
+typedef struct mlx
+{
+	void*		mlx;
+	void*		window;
+	t_data *img;
+	int		width;
+	int		height;
+	double		delta_time;
+}	t_mlx;
+
+
+typedef struct s_dist
+{
+	float		dist;
+	float		min_dist;
+	size_t		closest_obj;
+	t_sphere	*cl_sp;
+	t_plane		*cl_pl;
+	// t_cylinder	*cl_cy;
+	t_tuple	*dot_light;
+}	t_dist;
+
 typedef struct s_objects
 {
 }t_objects;
@@ -180,11 +195,18 @@ typedef struct s_scene
     t_sphere    *sphere;
     t_plane     *plane;
     t_cylinder *cylinder;
-    t_mlx   *mlx;
+    t_mlx   mlx;
     int		width;
 	int		height;
-    t_data *img;
+    
 }t_scene;
+typedef struct s_motatabika
+{
+	float	a;
+	float	b;
+	float	c;
+	float	disc;
+}	t_holol;
 
 
 ////////math f{}/////
@@ -284,8 +306,8 @@ t_ray *transform(t_ray *t, t_matrix *mat);
 void	init_scene(t_scene *scene);
 void init_camera(t_camera *cam,  float fov, float aspect_ratio);
 t_scene *allocat_scene(t_scene *scene);
-int minirt(char **av,t_scene * sc);
-int parser(char *av,t_scene *sc);
+int minirt(char **av,t_scene ** sc);
+int parser(char *av,t_scene **sc);
 //////camira
 void calculate_camera(t_scene *mt);
 
@@ -299,8 +321,8 @@ int fill_ambligth(t_amlight *al,char **s);
 int sphere_handle(t_sphere **lt,char **s);
 int cylinder_handle(t_cylinder **lt,char **s);
 int Plane_handle(t_plane **lt,char **s);
-int read_it(int fd, t_scene *scene);
-int fill_struct(t_scene *scene,char **buffer,int type);
+int read_it(int fd, t_scene **scene);
+int fill_struct(t_scene **scene,char **buffer,int type);
 int ft_rang(double min,double num,double max);
 int light_handle(t_light **lt,char **s);
 int camera_handle(t_camera **c,char **s);
@@ -310,6 +332,7 @@ int get_point(t_tuple *point,char *s);
 int get_normalizer(t_tuple *vector,char *s);
 int field_of_view(double *view,char *s);
 int diameter_handle(double *dmeter,char *s);
+float	ft_comp_float(float f1, float f2) ;
 void print_point(t_tuple l,t_color c);
 int check_if_nb(char *s);
 int	ft_isdigit(int c);
