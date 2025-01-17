@@ -43,9 +43,9 @@ typedef struct s_tuple	{
 
 typedef struct s_color
 {
-    double r;
-    double g;
-    double b;
+    int r;
+    int g;
+    int b;
 
 }t_color;
 
@@ -210,6 +210,7 @@ typedef struct s_motatabika
 
 
 ////////math f{}/////
+int color_to_int_with_alpha(t_color color);
 /* creat a point or a vector */
 double	sq(double num);
 t_tuple	*cpv(double x, double y, double z, double p_v);

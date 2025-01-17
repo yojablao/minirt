@@ -35,6 +35,12 @@ int check_file(char *s,int *fd)
     }
     return (1);
 }
+int color_to_int_with_alpha(t_color color)
+{
+    return (((color.r & 0xFF) << 16) | 
+           ((color.g & 0xFF) << 8) | (color.b & 0xFF));
+}
+
 int check_identifier(char *s)
 {
     s[1500];

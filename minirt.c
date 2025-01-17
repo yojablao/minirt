@@ -13,28 +13,37 @@
 #include "tool.h"
 float sphere_intersect(t_camera *cam, t_tuple *ray, t_sphere *sp)
 {
-    t_holol hal;
-    t_tuple *cam_sp;
-    float d1, d2;
+    t_holol hal;             // Struct to store the quadratic coefficients
+    t_tuple *L;              // Vector from ray origin to sphere center
+    float t1, t2;            // Two solutions for t
 
-    cam_sp = tpl_o(cam->cam_ray->o, sp->center, '-');
-    hal.a = 1.0; // Assuming ray is normalized
-    hal.b = 2 * (cam_sp->x * ray->x + cam_sp->y * ray->y + cam_sp->z * ray->z);
-    hal.c = cam_sp->x * cam_sp->x + cam_sp->y * cam_sp->y + cam_sp->z * cam_sp->z - pow(sp->diameter / 2, 2);
+    //Calculate L = O - C
+    L = tpl_o(cam->cam_ray->o, sp->center, '-');
+
+    hal.a = 1.0;
+    hal.b = 2 * (L->x * ray->x + L->y * ray->y + L->z * ray->z); // 2(L · D)
+    hal.c = (L->x * L->x + L->y * L->y + L->z * L->z) - pow(sp->diameter / 2, 2); // L · L - R^2
+
+    //Compute the discriminant
     hal.disc = pow(hal.b, 2) - 4.0 * hal.a * hal.c;
 
-    if (hal.disc < 0.0)
-        return (-1.0); // No intersection
+    if (hal.disc < EPSILON)
+    {
+        free(L); 
+        return (-1.0);
+    }
+    t1 = (-hal.b - sqrt(hal.disc)) / (2 * hal.a);
+    t2 = (-hal.b + sqrt(hal.disc)) / (2 * hal.a);
 
-    d1 = (-hal.b - sqrt(hal.disc)) / (2 * hal.a);
-    d2 = (-hal.b + sqrt(hal.disc)) / (2 * hal.a);
-
-    if (d1 > 0.0)
-        return (d1);
-    else if (d2 > 0.0)
-        return (d2);
+    //Return the closest positive t
+    free(L); // Free memory for L
+    if (t1 > EPSILON)
+        return t1;
+    if (t2 > EPSILON)
+        return t2;
     return (-1.0); // Intersection is behind the camera
 }
+
 
 void closest_sp(t_scene *mt, t_dist *dist, t_tuple *ray)
 {
@@ -46,7 +55,6 @@ void closest_sp(t_scene *mt, t_dist *dist, t_tuple *ray)
         if (dist->dist >= 0.0 && dist->dist < dist->min_dist) // Updated to check >= 0
         {
             dist->min_dist = dist->dist;
-            printf("dist->min_dist: %f\n", dist->min_dist);
             dist->closest_obj = 1;
             dist->cl_sp = sp;
         }
@@ -88,7 +96,6 @@ void closest_pl(t_scene *mt, t_dist *dist, t_tuple *ray)
         if (dist->dist >= 0.0 && dist->dist < dist->min_dist) // Updated to check >= 0
         {
             dist->min_dist = dist->dist;
-            printf("dist->min_dist: %f\n", dist->min_dist);
             dist->closest_obj = 2;
             dist->cl_pl = pl;
         }
@@ -98,6 +105,7 @@ void closest_pl(t_scene *mt, t_dist *dist, t_tuple *ray)
 void draw_intersection_obj(t_scene *sc, t_tuple *ray, int *color)
 {
     t_dist *dist = malloc(sizeof(t_dist));
+    t_color cl;
     float int_light = 0.0;
 
     dist = dist_init(dist);
@@ -111,18 +119,20 @@ void draw_intersection_obj(t_scene *sc, t_tuple *ray, int *color)
     // Default color if no object is hit
     if (!dist->closest_obj)
 	{
+        
         *color = 0xffffe5ff;
 		// printf("%d////////////////////////////////////////\n",*color);
 	}
     else
     {
-        if(dist->closest_obj == 2)
-            *color = 0x00ff00; // Placeholder color
-        else
-            *color = 0xff0000; // Placeholder color
+        if(dist->closest_obj == 1)
+        {  
+            *color = color_to_int_with_alpha(dist->cl_sp->color); // Placeholder color
 
-        // Here you can calculate lighting, shadows, etc.
-		// printf("%d-----------------------------\n",*color);
+        }
+        else
+            *color = color_to_int_with_alpha(dist->cl_pl->color); 
+
     }
 }
 
