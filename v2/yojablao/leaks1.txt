@@ -1,0 +1,68 @@
+==399131== Memcheck, a memory error detector
+==399131== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==399131== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==399131== Command: ./MRT lol.rt
+==399131== 
+==399131== Conditional jump or move depends on uninitialised value(s)
+==399131==    at 0x10AAE5: Plane_handle (in /home/yojablao/42pr/myminirt/v2/MRT)
+==399131==    by 0x10A669: fill_struct (in /home/yojablao/42pr/myminirt/v2/MRT)
+==399131==    by 0x10A776: pars_it (in /home/yojablao/42pr/myminirt/v2/MRT)
+==399131==    by 0x10A7D6: read_it (in /home/yojablao/42pr/myminirt/v2/MRT)
+==399131==    by 0x10A84E: parser (in /home/yojablao/42pr/myminirt/v2/MRT)
+==399131==    by 0x10A4C4: main (in /home/yojablao/42pr/myminirt/v2/MRT)
+==399131== 
+totobini/n85.000000  Ray Details:
+  Origin (O): (0.000000, 2.000000, -30.000000)
+  Direction (D): (0.000000, -0.100000, 1.000000)
+  ambligth: (0.000000, 0.000000, 0.000000)
+Sphere:
+  Center: (0.00, 0.00, 0.00)
+  Color:  (255, 255, 0)
+  Diameter: 5.00
+  ID: 0.00
+
+Sphere:
+  Center: (10.00, 10.00, 0.00)
+  Color:  (0, 0, 255)
+  Diameter: 5.00
+  ID: 0.00
+
+Sphere:
+  Center: (0.00, 5.00, 2.00)
+  Color:  (0, 0, 255)
+  Diameter: 5.00
+  ID: 0.00
+
+Sphere:
+  Center: (-1.00, 0.00, 5.00)
+  Color:  (0, 0, 0)
+  Diameter: 5.00
+  ID: 0.00
+
+Light:
+  Position: (0.00, 8.00, -3.00)
+  r: 1.00
+  Color:  (255, 255, 255)
+
+Light:
+  Position: (0.00, 8.00, -3.00)
+  r: 0.50
+  Color:  (255, 0, 255)
+
+Cylinder:
+  Center: (3.00, 0.00, 0.00)
+  Axis:   (0.00, 1.00, 0.00)
+  Diameter: 2.00
+  Height: 2.00
+  Color:  (25, 250, 25)
+
+==399131== 
+==399131== HEAP SUMMARY:
+==399131==     in use at exit: 0 bytes in 0 blocks
+==399131==   total heap usage: 212 allocs, 212 frees, 8,354 bytes allocated
+==399131== 
+==399131== All heap blocks were freed -- no leaks are possible
+==399131== 
+==399131== Use --track-origins=yes to see where uninitialised values come from
+==399131== For lists of detected and suppressed errors, rerun with: -s
+==399131== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

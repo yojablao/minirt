@@ -1,0 +1,45 @@
+totobini/n85.000000  Ray Details:
+  Origin (O): (0.000000, 2.000000, -30.000000)
+  Direction (D): (0.000000, -0.100000, 1.000000)
+  ambligth: (0.000000, 0.000000, 0.000000)
+Sphere:
+  Center: (0.00, 0.00, 0.00)
+  Color:  (255, 255, 0)
+  Diameter: 5.00
+  ID: 0.00
+
+Sphere:
+  Center: (10.00, 10.00, 0.00)
+  Color:  (0, 0, 255)
+  Diameter: 5.00
+  ID: 0.00
+
+Sphere:
+  Center: (0.00, 5.00, 2.00)
+  Color:  (0, 0, 255)
+  Diameter: 5.00
+  ID: 0.00
+
+Sphere:
+  Center: (-1.00, 0.00, 5.00)
+  Color:  (0, 0, 0)
+  Diameter: 5.00
+  ID: 0.00
+
+Light:
+  Position: (0.00, 8.00, -3.00)
+  r: 1.00
+  Color:  (255, 255, 255)
+
+Light:
+  Position: (0.00, 8.00, -3.00)
+  r: 0.50
+  Color:  (255, 0, 255)
+
+Cylinder:
+  Center: (3.00, 0.00, 0.00)
+  Axis:   (0.00, 1.00, 0.00)
+  Diameter: 2.00
+  Height: 2.00
+  Color:  (25, 250, 25)
+
